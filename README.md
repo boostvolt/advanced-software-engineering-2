@@ -8,7 +8,6 @@ The repository is structured to clearly reflect all project tasks (Task 1–6), 
 ---
 
 ## **Table of Contents**
-- [Project Structure](#project-structure)
 - [Folders in Detail](#folders-in-detail)
 - [Methodological Summary](#methodological-summary)
 - [Authors](#authors)
@@ -19,7 +18,6 @@ The repository is structured to clearly reflect all project tasks (Task 1–6), 
 The directory layout is:
 
 ```
-
 .
 ├── README.md
 ├── task-1-research/
@@ -68,63 +66,60 @@ The directory layout is:
 
 ## Folders in Detail
 
-1.  ** `task-1-research/`**
-Contains the theoretical foundation of the project:
-- **topic-definition.md** → Definition and scope of AI-assisted SWE  
-- **motivations.md** → Why this topic is relevant in large systems  
-- **challenges.md** → Key technical and organizational challenges  
-- **literature-review.md** → Academic and industry sources  
-- **use-cases.md** → Real-world applications and examples  
+1. **`task-1-research/`**
+    * **`topic-definition.md`**: Defines AI-assisted Software Engineering and clarifies the project scope.
+    * **`motivations.md`**: Explains why the topic is relevant, especially in large and complex systems.
+    * **`challenges.md`**: Summarizes the main technical and organizational challenges.
+    * **`literature-review.md`**: Reviews academic and industry sources relevant to the topic.
+    * **`use-cases.md`**: Presents practical examples and real-world applications.
 
----
+2. **`task-2-case-study/`**
+    * **`overview.md`**: Introduces the selected case study and its context.
+    * **`solutions-analysis.md`**: Compares existing tools, methods, and possible approaches.
+    * **`selected-solution.md`**: Explains and justifies the chosen solution.
+    * **`implementation/`**: Contains code, configuration files, and setup material.
+    * **`results/`**: Stores outputs, observations, and evaluation results.
+    * **`demo/`**: Includes instructions and supporting material for demonstration.
+    * **`reflection/`**: Critical assessment including rationale, difficulties, trade-offs, limitations, and future improvements.
 
-2.  ** `task-2-case-study/`** (Core of the project)
-Contains the practical investigation and implementation:
+3. **`task-3-report/`**
+    * Final short report summarizing context, problem, methodology, results, and conclusions.
 
-- **overview.md** → Description of the case study  
-- **solutions-analysis.md** → Comparison of existing tools and approaches  
-- **selected-solution.md** → Justification of chosen solution  
+4. **`task-4-activity/`**
+    * Interactive activity (e.g., quiz, discussion, exercise) with supporting materials.
 
-#### Subfolders:
-- **implementation/** → Code, configurations, and setup  
-- **results/** → Outputs, metrics, and observations  
-- **demo/** → Instructions for demonstrating the case study  
-- **reflection/** → Critical analysis:
-  - decision rationale  
-  - implementation difficulties  
-  - trade-offs  
-  - limitations  
-  - future improvements  
+5. **`task-5-presentation/`**
+    * Presentation slides for the final session, optionally including speaker notes.
 
----
+6. **`task-6-discussion/`**
+    * Material for critical discussion or review of another team’s work.
 
-3.  ** `task-3-report/`**
-- Final short report (2–5 pages) summarizing:
-  - context and motivation  
-  - problem definition  
-  - results and conclusions  
+7. **`references/`**
+    * Bibliography and reference material used throughout the project.
 
----
 
-4.  ** `task-4-activity/`**
-- Interactive activity for the class (e.g., quiz, game, discussion)  
-- Includes description and supporting materials  
+## Methodological Summary
 
----
+1. **Topic Selection**
+    * Identify AI-assisted Software Engineering as a key challenge in large-scale systems.
 
-5.  ** `task-5-presentation/`**
-- Presentation slides used during the final session  
-- Optional speaker notes  
+2. **Literature & Problem Analysis**
+    * Review research, extract challenges, and identify industry use cases.
 
----
+3. **Solution Exploration**
+    * Investigate tools and frameworks (e.g., AI coding assistants, automation tools).
 
-6.  ** `task-6-discussion/`**
-- Discussion slide providing critical review of another team’s work  
+4. **Case Study Implementation**
+    * Apply the selected solution to a real-world or open-source project.
 
----
+5. **Evaluation & Reflection**
+    * Analyze trade-offs, limitations, implementation challenges, and gaps in current solutions.
 
-7.  ** `references/`**
-- Bibliography and academic references used throughout the project  
+6. **Synthesis of Results**
+    * Summarize findings in a structured report and presentation.
+
+7. **Knowledge Transfer**
+    * Design an interactive activity to communicate key concepts.
 
 ---
 
