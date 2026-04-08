@@ -68,7 +68,7 @@ The directory layout is:
 
 ## Folders in Detail
 
-### **1. `task-1-research/`**
+1.  ** `task-1-research/`**
 Contains the theoretical foundation of the project:
 - **topic-definition.md** → Definition and scope of AI-assisted SWE  
 - **motivations.md** → Why this topic is relevant in large systems  
@@ -78,7 +78,7 @@ Contains the theoretical foundation of the project:
 
 ---
 
-### **2. `task-2-case-study/`** (Core of the project)
+2.  ** `task-2-case-study/`** (Core of the project)
 Contains the practical investigation and implementation:
 
 - **overview.md** → Description of the case study  
@@ -98,7 +98,7 @@ Contains the practical investigation and implementation:
 
 ---
 
-### **3. `task-3-report/`**
+3.  ** `task-3-report/`**
 - Final short report (2–5 pages) summarizing:
   - context and motivation  
   - problem definition  
@@ -106,54 +106,25 @@ Contains the practical investigation and implementation:
 
 ---
 
-### **4. `task-4-activity/`**
+4.  ** `task-4-activity/`**
 - Interactive activity for the class (e.g., quiz, game, discussion)  
 - Includes description and supporting materials  
 
 ---
 
-### **5. `task-5-presentation/`**
+5.  ** `task-5-presentation/`**
 - Presentation slides used during the final session  
 - Optional speaker notes  
 
 ---
 
-### **6. `task-6-discussion/`**
+6.  ** `task-6-discussion/`**
 - Discussion slide providing critical review of another team’s work  
 
 ---
 
-### **7. `references/`**
+7.  ** `references/`**
 - Bibliography and academic references used throughout the project  
-
----
-
-## Methodological Summary
-
-1. **Topic Selection**  
-   Identify AI-assisted Software Engineering as a key challenge in large-scale systems.
-
-2. **Literature & Problem Analysis**  
-   Study existing research, extract challenges, and identify industry use cases.
-
-3. **Solution Exploration**  
-   Investigate tools and frameworks (e.g., AI coding assistants, automation tools).
-
-4. **Case Study Implementation**  
-   Apply a selected solution to a real-world or open-source project.
-
-5. **Evaluation & Reflection**  
-   Analyze:
-   - trade-offs  
-   - limitations  
-   - practical challenges  
-   - gaps in current solutions  
-
-6. **Synthesis of Results**  
-   Summarize findings in a structured report and presentation.
-
-7. **Knowledge Transfer**  
-   Design an interactive activity to communicate key concepts.
 
 ---
 
