@@ -105,7 +105,11 @@ The directory layout is:
 2. **`Mata Marco (matamar)`**  Contributor
 3. **`Galindo Lopez Pablo Emiliano (galinpab)`** Contributor
 
+<<<<<<< HEAD
 ---
 
 ### License
 "All Rights Reserved."
+=======
+
+>>>>>>> 36f436a (task1-draft)
