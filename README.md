@@ -97,30 +97,6 @@ The directory layout is:
 7. **`references/`**
     * Bibliography and reference material used throughout the project.
 
-
-## Methodological Summary
-
-1. **Topic Selection**
-    * Identify AI-assisted Software Engineering as a key challenge in large-scale systems.
-
-2. **Literature & Problem Analysis**
-    * Review research, extract challenges, and identify industry use cases.
-
-3. **Solution Exploration**
-    * Investigate tools and frameworks (e.g., AI coding assistants, automation tools).
-
-4. **Case Study Implementation**
-    * Apply the selected solution to a real-world or open-source project.
-
-5. **Evaluation & Reflection**
-    * Analyze trade-offs, limitations, implementation challenges, and gaps in current solutions.
-
-6. **Synthesis of Results**
-    * Summarize findings in a structured report and presentation.
-
-7. **Knowledge Transfer**
-    * Design an interactive activity to communicate key concepts.
-
 ---
 
 ## Authors
@@ -128,3 +104,8 @@ The directory layout is:
 1. **`Dao Trong-Nghia (daotro01)`**  Contributor
 2. **`Mata Marco (matamar)`**  Contributor
 3. **`Galindo Lopez Pablo Emiliano (galinpab)`** Contributor
+
+---
+
+### License
+"All Rights Reserved."
