@@ -1,115 +1,56 @@
 # ASE – AI-Assisted Software Engineering (Team 08)
 
-This repository contains the full project developed for the Advanced Software Engineering (ASE) course. 
-The main goal is to investigate challenges in large-scale software systems, focusing on **AI-assisted Software Engineering**, and to evaluate existing solutions through a practical case study.
+Project for the Advanced Software Engineering 2 (ASE2) course. We investigate **the effects of AI-assisted software engineering on code quality and security** in real-world projects, and apply one existing solution to an open source case study.
 
-The repository is structured to clearly reflect all project tasks (Task 1–6), ensuring traceability between research, implementation, and evaluation.
+The Task 1.3 draft submitted on Sunday Apr 12 is at [task-1-research/draft-submission.md](task-1-research/draft-submission.md). The full course brief is in [task-spec.md](task-spec.md).
 
----
+## Deadlines
 
-## **Table of Contents**
-- [Folders in Detail](#folders-in-detail)
-- [Methodological Summary](#methodological-summary)
-- [Authors](#authors)
+| Date | Deliverable | Where |
+|---|---|---|
+| **Sun 2026-04-12, 23:59** | Task 1.3 draft (summary of Tasks 1.1 and 1.2) + team registration | Moodle |
+| **Tue 2026-05-05, 23:59** | Short report (Task 3 — **mandatory**, no grade without it) | Moodle |
+| **Tue 2026-05-19, 23:59** | Final submission: short report, presentation, discussion slide, code repo link | Moodle |
 
----
+## Weekly plan
 
-## **Project Structure**
-The directory layout is:
+_The team works on everything together. Budget: about 4 to 6 hours per week, total. Each week is one focused session._
 
-```
-.
-├── README.md
-├── task-1-research/
-│   ├── topic-definition.md
-│   ├── motivations.md
-│   ├── challenges.md
-│   ├── literature-review.md
-│   └── use-cases.md
-│
-├── task-2-case-study/
-│   ├── overview.md
-│   ├── solutions-analysis.md
-│   ├── selected-solution.md
-│   ├── implementation/
-│   │   └── README.md
-│   ├── results/
-│   ├── demo/
-│   │   └── demo-guide.md
-│   └── reflection/
-│       ├── decision-rationale.md
-│       ├── difficulties.md
-│       ├── tradeoffs.md
-│       ├── limitations.md
-│       └── future-work.md
-│
-├── task-3-report/
-│   └── short-report.pdf
-│
-├── task-4-activity/
-│   ├── activity-description.md
-│   └── materials/
-│
-├── task-5-presentation/
-│   ├── slides.pdf
-│   └── notes.md
-│
-├── task-6-discussion/
-│   └── discussion-slide.pdf
-│
-└── references/
-    └── bibliography.bib
+#### Week 1 — Apr 6–12
+- [x] Register team on Moodle
+- [ ] Read and sign off on the Task 1 files together
+- [ ] **Submit Task 1.3 draft on Moodle (Sun Apr 12)**
 
-```
+#### Week 2 — Apr 13–19
+- [ ] Pick the open source repo for the case study
+- [ ] Pick the Task 2 tool (one from: CodeRabbit, Semgrep, Snyk Code, Aikido, Copilot PR review, SonarQube)
+- [ ] Set up the case study repo under `task-2-case-study/implementation/`
 
----
+#### Week 3 — Apr 20–26
+- [ ] Run the tool against the case study repo
+- [ ] Save results and notes in `task-2-case-study/results/`
 
-## Folders in Detail
+#### Week 4 — Apr 27–May 3
+- [ ] Write the reflection (one file is fine, can split later if needed)
+- [ ] Write the short report draft (2 to 5 pages)
 
-1. **`task-1-research/`**
-    * **`topic-definition.md`**: Defines AI-assisted Software Engineering and clarifies the project scope.
-    * **`motivations.md`**: Explains why the topic is relevant, especially in large and complex systems.
-    * **`challenges.md`**: Summarizes the main technical and organizational challenges.
-    * **`literature-review.md`**: Reviews academic and industry sources relevant to the topic.
-    * **`use-cases.md`**: Presents practical examples and real-world applications.
+#### Week 5 — May 4–10
+- [ ] Polish the short report and export to PDF
+- [ ] **Submit short report on Moodle (Tue May 5)**
+- [ ] Sketch the class activity and the slides outline
 
-2. **`task-2-case-study/`**
-    * **`overview.md`**: Introduces the selected case study and its context.
-    * **`solutions-analysis.md`**: Compares existing tools, methods, and possible approaches.
-    * **`selected-solution.md`**: Explains and justifies the chosen solution.
-    * **`implementation/`**: Contains code, configuration files, and setup material.
-    * **`results/`**: Stores outputs, observations, and evaluation results.
-    * **`demo/`**: Includes instructions and supporting material for demonstration.
-    * **`reflection/`**: Critical assessment including rationale, difficulties, trade-offs, limitations, and future improvements.
+#### Week 6 — May 11–17
+- [ ] Build the slides and the activity materials
+- [ ] Read the assigned team's report and write the discussion slide
+- [ ] One rehearsal of the presentation
 
-3. **`task-3-report/`**
-    * Final short report summarizing context, problem, methodology, results, and conclusions.
-
-4. **`task-4-activity/`**
-    * Interactive activity (e.g., quiz, discussion, exercise) with supporting materials.
-
-5. **`task-5-presentation/`**
-    * Presentation slides for the final session, optionally including speaker notes.
-
-6. **`task-6-discussion/`**
-    * Material for critical discussion or review of another team’s work.
-
-7. **`references/`**
-    * Bibliography and reference material used throughout the project.
-
----
+#### Week 7 — May 18–19
+- [ ] Final pass on everything
+- [ ] **Submit all deliverables on Moodle (Tue May 19)**
+- [ ] Presentation day (confirm date with lecturers in advance)
 
 ## Authors
 
-1. **`Dao Trong-Nghia (daotro01)`**  Contributor
-2. **`Mata Marco (matamar)`**  Contributor
-3. **`Galindo Lopez Pablo Emiliano (galinpab)`** Contributor
-
-<<<<<<< HEAD
----
-
-### License
-"All Rights Reserved."
-=======
-
->>>>>>> 36f436a (task1-draft)
+- Dao Trong-Nghia (daotro01)
+- Mata Marco (matamar)
+- Galindo Lopez Pablo Emiliano (galinpab)
