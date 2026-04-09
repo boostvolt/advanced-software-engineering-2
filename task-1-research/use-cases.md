@@ -1,43 +1,31 @@
-# Use Cases from Industry
+# Task 1.2 - Industry and Domain Use Cases
 
-Two real-world cases that we use in the draft and will carry into the short report. Both directly implicate AI-assisted development.
+## Use Case 1: Duolingo as a positive case of bounded productivity gains
 
----
+Duolingo is a useful case because it shows AI assistance deployed inside a real engineering organization rather than in an isolated experiment. GitHub’s customer story reports a 25% increase in developer speed, a 67% decrease in median code review turnaround time, and a 70% increase in pull requests after the introduction of GitHub Copilot [4]. These numbers should be interpreted with caution because they come from a customer success story, but they are still valuable as evidence of how AI can matter in day-to-day engineering workflows.
 
-## 1. Clawdbot / Moltbot / OpenClaw (Nov 2025 – Feb 2026) — *primary*
+What makes this case relevant is not only the productivity signal. It also shows the specific mechanisms by which the gains can emerge. In practice, improvements of this kind usually come from reducing boilerplate work, shortening search loops, helping engineers maintain flow, and making it easier to draft changes and reviews. For a team working on a large product, that kind of acceleration can matter even if the AI is not making deep architectural decisions.
 
-Open-source autonomous AI agent framework published by Peter Steinberger in November 2025. In the last week of January 2026 it reached **149,000 GitHub stars**, was renamed twice in four days (Anthropic trademark complaint → "Moltbot" → "OpenClaw"), and during the rename window crypto scammers hijacked the GitHub organisation and X handle in the ~10-second gap. The cascade exposed **1.49 million database records**, enabled an **$8M crypto scam**, and — as *Axios* reported and Bitdefender confirmed — left hundreds of control interfaces accessible on the public internet, exposing chat logs, API keys, and remote command execution.
+## Use Case 2: Accenture as a large-enterprise adoption case
 
-**Why it matters.** Compresses all four challenge clusters into a single week: insecure-by-default AI-generated agent code, a review bottleneck no process could absorb at 149k stars/week, a novel supply-chain dimension (an *agent* is code that executes code — downstream users inherit an active execution environment), and ecosystem stress at a scale that drew trademark conflict, account hijacks, and a crypto-scam pile-on within days. Every prevention tool that should have caught it existed; none operated at the speed the incident required.
+Accenture is a stronger case for organizational scale. GitHub’s enterprise study reports rapid adoption, a 96% same-day success rate among users who installed the extension, 67% usage at least five days per week, an 8.69% increase in pull requests, and an 84% increase in successful builds [3]. The associated customer story further emphasizes that Copilot was particularly useful for writing tests and tackling technical debt [3].
 
-**Numbers to verify before the short report.** 149,000 GitHub stars, 1.49M database records, $8M crypto scam, 10-second hijack window. Currently sourced from secondary reporting. We need to cross-check against the primary Unit 42 analysis.
+This use case matters because it demonstrates that AI-assisted SWE is not restricted to small greenfield teams or hobby projects. In a large consulting and delivery environment, the value proposition is broader. AI can help developers move faster in unfamiliar parts of the codebase, reduce repetitive effort, and free capacity for higher-value work. At the same time, this case also reminds us that successful adoption requires structure: licenses, IDE integration, measurement, and organizational support. The tool alone is not the entire explanation.
 
-**Sources.** Unit 42; Kaspersky; CyberNews; DEV Community timeline; Axios (news); Bitdefender.
+## Use Case 3: Samsung as a cautionary governance case
 
----
+Samsung is the most important counterexample in the topic. According to Bloomberg, Samsung restricted employee use of generative AI systems after employees uploaded sensitive code and information to ChatGPT [10]. This incident is widely cited because it illustrates a core governance issue in AI-assisted SWE: the same tool that increases convenience can also increase data exposure risk.
 
-## 2. curl bug bounty closure (2025) — *primary*
+The relevance of the Samsung case goes beyond one company. It demonstrates that AI adoption in software engineering is constrained not only by model quality, but also by compliance, data handling, intellectual property protection, and policy design. In an academic setting, this is a valuable reminder that the engineering question is not just “does the tool help?” but also “under what operational conditions is its use acceptable?”
 
-curl, maintained by Daniel Stenberg, ran a security bug bounty for years. Throughout 2025 it was overwhelmed by AI-generated "vulnerability" reports — well-written, plausible, almost entirely wrong. The valid-report rate dropped to **~5%**. At the start of 2026, Stenberg closed the program.
+## Use Case 4: Open-source collaboration as a mixed case
 
-**Why it matters.** The LeadDev 12× asymmetry applied to security triage instead of code review. Reports used correct security vocabulary so they passed the surface check. curl tried stricter guidelines, templates, and published bad-submission examples; nothing worked. The case demonstrates the **absence** of solutions: no AI-aware triage tool, no reporter-reputation system, and no validation layer succeeded at a rate that preserved maintainer sanity.
+Collaborative open-source development provides a different kind of use case because it exposes the tool to distributed review and integration processes. Song et al. found that GitHub Copilot increased project-level productivity by 6.5% and individual productivity by 5.5%, but also increased integration time by 41.6% [12]. This is a particularly useful case for ASE because it reveals a hidden trade-off. When more developers can produce changes more quickly, downstream coordination may become more demanding.
 
-**Sources.** The New Stack; LeadDev; All Things Open.
+This case is significant because large complex systems often behave more like collaborative open-source projects than like isolated benchmark tasks. Multiple contributors, pull requests, reviews, and integration steps all interact. A tool that looks highly productive from the perspective of one person may generate different outcomes at the level of the project.
 
----
+## Overall interpretation of the use cases
 
-## What the two cases tell us together
+Taken together, the use cases support a balanced conclusion. Duolingo and Accenture show that AI-assisted SWE can create meaningful gains in speed, review turnaround, test creation, and developer experience [3], [4]. Samsung shows that the same class of tools can create governance and confidentiality problems when used without sufficient controls [10]. Open-source evidence shows that productivity gains may coexist with increased integration effort [12].
 
-| Case | Cluster exercised | What existing solutions failed to do |
-|---|---|---|
-| Clawdbot / OpenClaw | Security + review + supply chain + ecosystem | Operate at the speed AI projects evolve |
-| curl bug bounty | Review + shallow plausibility | Filter AI slop from real reports |
-
-Both point to the same gap: **review, triage, and verification capacity has not kept pace with the rate at which AI is producing code, contributions, and agents.** That gap is the target of our Task 2 case study.
-
----
-
-## Cases we considered but cut from the draft
-
-- **Ghostty (2025)** — open source terminal emulator that banned all AI-generated contributions in its contribution guidelines. Cut because it is essentially a one-line corollary to curl: same economics, smaller scale.
-- **axios npm supply-chain compromise (March 31, 2026)** — malicious `axios@1.14.1` and `axios@0.30.4` packages published from a compromised maintainer account, delivering a cross-platform RAT via a pre-staged `plain-crypto-js@4.2.1` postinstall script. Microsoft Threat Intelligence attributed it to Sapphire Sleet (North Korean state actor). Cut because the root cause was a hijacked maintainer account, not AI-generated code, so the connection to our thesis required defensive framing that costs more space than the case is worth in a draft. Could come back in the Task 3 short report as the supply-chain illustration if there is room.
+Therefore, the most accurate lesson from practice is not that AI assistance is universally good or bad. It is that the benefits are real, but they come with dependencies: task boundedness, context quality, review discipline, collaboration structure, and organizational governance.
