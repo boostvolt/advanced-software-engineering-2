@@ -49,6 +49,14 @@ _The team works on everything together. Budget: about 4 to 6 hours per week, tot
 - [ ] **Submit all deliverables on Moodle (Tue May 19)**
 - [ ] Presentation day (confirm date with lecturers in advance)
 
+## Generate PDF
+
+```bash
+pandoc <input>.md -o <output>.pdf --pdf-engine=xelatex -V geometry:margin=1in -V fontsize=11pt -V header-includes:'\usepackage{fancyhdr}\pagestyle{fancy}\fancyhead{}\fancyhead[C]{daotro01, matamar, galinpab}\fancyfoot{}\fancyfoot[C]{\thepage}'
+```
+
+Requires `pandoc` and `basictex` (`brew install pandoc basictex`).
+
 ## Authors
 
 - Dao Trong-Nghia (daotro01)
