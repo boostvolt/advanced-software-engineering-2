@@ -12,12 +12,9 @@ The repository is organized explicitly around the official ASE project tasks. Th
 ## Table of Contents
 
 - [Project Overview](#project-overview)
-- [Project Structure](#project-structure)
 - [Folders in Detail](#folders-in-detail)
 - [Methodological Summary](#methodological-summary)
 - [Current Scope and Deliverables](#current-scope-and-deliverables)
-- [Authors](#authors)
-- [License](#license)
 
 ---
 
@@ -75,6 +72,9 @@ The repository follows a task-oriented organization aligned with the ASE evaluat
 └── task-spec.md
 
 12 directories, 27 files
+
+```
+
 ---
 
 ## **Folders in Detail**
