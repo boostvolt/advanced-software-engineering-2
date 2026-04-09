@@ -1,177 +1,141 @@
 # Literature Review
 
-This review prioritizes **2025 and 2026** sources because the phenomena we study (open coding agents, the AI code review bottleneck, AI-generated supply-chain attacks) have evolved substantially since 2024. Earlier sources are included only where they provide essential baselines.
+Annotated source list for the Task 1 draft and the upcoming Task 3 short report. Each entry gives what the source is, the specific claim we use it for, and any methodology caveat. Sources we evaluated but rejected are listed at the end with one-line reasons. Full BibTeX in `references/bibliography.bib`. Verdict reasoning for every candidate source lives in `source-evaluation.md`.
 
-Each entry gives: *what the source is*, *the specific claim we use from it*, and *how it supports our argument*.
-
----
-
-## A. Industry studies on AI code quality
-
-### 1. GitClear — "AI Copilot Code Quality: 2025 Data Suggests 4x Growth in Code Clones"
-- **What it is.** A longitudinal study of 211 million lines changed between 2020 and 2024, sampling from Google, Microsoft, Meta, and enterprise repositories. Published by GitClear (the team behind the 2024 "downward pressure on code quality" report).
-- **Key findings we use.**
-  - 4x increase in duplicated code blocks since 2020.
-  - For the first time in the dataset, "copy/paste" exceeds "moved" (refactored) code.
-  - "Moved lines" share dropped from 24.1% (2020) → 9.5% (2024).
-  - Two-week churn rose from 5.5% → 7.9%.
-  - Bill Harding's term: **"AI-induced tech debt"**.
-- **Why it matters for us.** This is the strongest longitudinal evidence that AI adoption correlates with measurable code-quality degradation in real enterprise repositories, not just lab benchmarks. URL: https://www.gitclear.com/ai_assistant_code_quality_2025_research
-- **Limitations.** Correlational, not causal. GitClear's methodology is proprietary and not peer-reviewed.
-
-### 2. CMU 2025 study (as reported by Rob Bowley / Dec 2025)
-- **What it is.** Carnegie Mellon study, late 2025, confirming GitClear's direction with an academic methodology.
-- **Key finding we use.** Independent confirmation that AI adoption correlates with rising code churn and duplication.
-- **Why it matters.** Adds an academic counterpart to GitClear's industry dataset.
-
-### 3. LeadDev — "How AI Generated Code Accelerates Technical Debt" (2025)
-- **What it is.** Practitioner-focused analysis by LeadDev based on interviews and review of industry data.
-- **Key claim we use.** AI assistants systematically shift cost from *writing* to *maintaining*, with the mechanism being the erosion of refactoring discipline.
-- **Why it matters.** Connects the GitClear numbers to a practitioner-level explanation of *why* it happens.
+We prioritise **2025–2026 sources** because the phenomena we study (open coding agents, the AI review bottleneck, AI-driven supply-chain attacks) have evolved substantially since 2024. Earlier sources are kept only as essential anchors.
 
 ---
 
-## B. Security studies
+## A. Code quality
 
-### 4. Veracode — "2025 GenAI Code Security Report" (October 2025 update)
-- **What it is.** Analysis of 100+ large language models across Java, JavaScript, Python, and C#. The most comprehensive industry security study of generated code published in 2025.
-- **Key findings we use.**
-  - **45% of AI-generated code contains at least one high-severity vulnerability.**
-  - Java is the riskiest language: **72% security failure rate**.
-  - XSS defenses missing in **86%** of relevant code samples.
-  - Security performance is **flat across model generations** — larger, newer models are not safer.
-  - Functional correctness and security correctness have decoupled.
-- **Why it matters.** This is the headline security number we use throughout the project. URL: https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/
-- **Limitations.** Benchmark-based; generated code was evaluated in test harnesses, not always in full project context.
+**GitClear (2025) — *AI Copilot Code Quality: 2025 Data Suggests 4× Growth in Code Clones***
+Longitudinal study of 211M changed lines (2020–2024) across Google, Microsoft, Meta and enterprise repos.
+- 4× increase in cloned blocks; copy/paste exceeds "moved" (refactored) code for the first time.
+- Moved-lines share dropped from 24.1% (2020) → 9.5% (2024).
+- Two-week churn: 5.5% → 7.9%. Bill Harding's term: **"AI-induced tech debt"**.
+- Limitations: correlational, proprietary methodology, not peer-reviewed.
+- URL: https://www.gitclear.com/ai_assistant_code_quality_2025_research
 
-### 5. Snyk — AI co-authored PR vulnerability data (2025)
-- **What it is.** Pull-request telemetry from Snyk customers.
-- **Key finding we use.** AI co-authored PRs contain **2.74x more vulnerabilities** than human-only PRs.
-- **Why it matters.** Real production PR data (not benchmarks), complementing Veracode's benchmark numbers.
+## B. Code security
 
-### 6. CodeRabbit — "State of AI vs Human Code Generation" (2025)
-- **What it is.** Analysis of 470 PRs comparing AI-authored and human-authored changes.
-- **Key findings we use.**
-  - AI PRs produced 10.83 issues per PR vs 6.45 for human PRs.
-  - Critical issues up ~40% in AI PRs.
-  - Major issues up ~70% in AI PRs.
-- **Why it matters.** Ties severity distribution to authorship and supports our "shallow review misses AI's specific failure modes" argument.
+**Veracode (2025) — *2025 GenAI Code Security Report*** *(headline source)*
+Evaluation of 100+ LLMs across Java, JavaScript, Python, C#.
+- **45% of AI-generated code contains at least one high-severity vulnerability.**
+- Java is the riskiest language (72% security failure rate).
+- XSS defenses missing in 86% of relevant samples.
+- **Security performance is flat across model generations** — bigger models are not safer.
+- URL: https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/
 
-### 7. Microsoft Security / Unit 42 / Arctic Wolf / Snyk — axios npm compromise reporting (March–April 2026)
-- **What it is.** Coordinated incident reporting on the March 31, 2026 axios npm supply-chain attack.
-- **Key facts we use.**
-  - Malicious versions `axios@1.14.1` and `axios@0.30.4` published via compromised maintainer account.
-  - Pre-staged malicious dependency `plain-crypto-js@4.2.1` delivered a cross-platform RAT via postinstall script.
-  - Microsoft Threat Intelligence attribution: **Sapphire Sleet** (North Korean state actor).
-  - axios is a transitive dependency in "millions of applications" — 70M+ weekly downloads.
-- **Why it matters.** Canonical recent example of how a single compromised package ripples through an AI-accelerated ecosystem. See `use-cases.md` for the full treatment.
-- **Sources.** Microsoft Security Blog, Unit 42 Threat Brief, SANS ISC, Arctic Wolf, Snyk, StepSecurity, The Hacker News, SiliconANGLE.
+**Snyk (2025) — pull-request telemetry**
+**AI co-authored PRs contain 2.74× more vulnerabilities** than human-only PRs. Production data, not benchmarks.
 
----
+## C. Code review and delivery metrics
 
-## C. Code review bottleneck studies
+**Google Cloud DORA (2025) — *State of AI-Assisted Software Development***
+- 90% AI adoption among software professionals; median 2 hours/day of AI use.
+- Central thesis: **"AI amplifies what is already there"** — strong teams benefit, weak teams degrade.
+- AI adoption has a *negative* relationship with software delivery stability.
+- Caveat: we are reading this through summaries (Faros AI, InfoQ). We need to read the full report before the Task 3 short report.
+- URL: https://dora.dev/research/2025/dora-report/
 
-### 8. Faros AI — "Key Takeaways from the DORA Report 2025"
-- **What it is.** Faros AI's analysis of 10,000+ developers, cross-referenced with the 2025 DORA report findings.
-- **Key findings we use.**
-  - 98% increase in PR volume post-AI adoption.
-  - 91% increase in review time per PR.
-  - 18% increase in PR size.
-  - 21% more tasks completed per developer.
-- **Why it matters.** The clearest quantification of the review bottleneck shift. URL: https://www.faros.ai/blog/key-takeaways-from-the-dora-report-2025
+## D. Academic / human factors
 
-### 9. DORA 2025 — "State of AI-Assisted Software Development" (Google Cloud)
-- **What it is.** The 2025 edition of the DORA report, focused entirely on AI-assisted software development. Survey-based, published late 2025.
-- **Key findings we use.**
-  - 90% AI adoption among software professionals; median 2 hours/day of AI use.
-  - Central thesis: **"AI amplifies what is already there"** — strong teams benefit, weak teams degrade.
-  - AI adoption has a negative relationship with software delivery *stability*.
-  - Seven team archetypes, each with different AI response patterns.
-  - DORA AI Capabilities Model — 90% of orgs have adopted at least one platform; platform quality correlates with AI benefit capture.
-- **Why it matters.** The closest thing to an authoritative industry baseline. Its nuanced framing ("amplifier, not uniform force") shapes the core argument in `motivations.md`. URL: https://dora.dev/research/2025/dora-report/
+**Kabir, Udo-Imeh, Kou, Zhang (2023) — *Is Stack Overflow Obsolete? An Empirical Study of the Characteristics of ChatGPT Answers to Stack Overflow Questions*** (CHI 2024)
+Peer-reviewed academic paper. The only peer-reviewed source we currently lean on.
+- 52% of ChatGPT answers to programming questions contain incorrect information.
+- 77% of answers are verbose.
+- Despite this, users still preferred ChatGPT answers 35% of the time and overlooked the misinformation 39% of the time.
+- Why we cite it: explains the *human* mechanism behind why insecure AI code reaches production. People accept plausible wrong answers.
+- URL: https://arxiv.org/pdf/2308.02312
 
-### 10. LogRocket — "Why AI Coding Tools Shift the Real Bottleneck to Review" (2025)
-- **What it is.** Practitioner-focused blog post consolidating the bottleneck-shift argument.
-- **Key claim we use.** "If your team adopts AI coding tools without restructuring how code review works, expect *slower* releases, not faster ones." Senior engineers spend 4.3 minutes reviewing AI suggestions vs. 1.2 minutes for human-written code.
-- **Why it matters.** Direct, quotable framing of the bottleneck inversion.
+## E. Adoption baseline
 
-### 11. Logilica — "The Shifting Bottleneck Conundrum" (2025)
-- **What it is.** Engineering-metrics vendor analysis. Parallel evidence to LogRocket.
+**GitHub Octoverse 2025 — *A New Developer Joins GitHub Every Second as AI Leads TypeScript to #1***
+- 180M+ developers on GitHub; 36M joined in 2025 alone.
+- Nearly 80% of new developers use GitHub Copilot in their first week.
+- 1.1M+ public repositories use an LLM SDK.
+- TypeScript became the most-used language in August 2025.
+- Why we cite it: sharper "AI is the default for new developers" framing than DORA's 90%-already number.
+- URL: https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/
 
-### 12. Help Net Security / CodeRabbit — "AI Code Looks Fine Until the Review Starts" (Dec 2025)
-- **What it is.** Coverage of CodeRabbit's AI-assisted PR report.
-- **Key claim.** AI code passes superficial review but fails deeper analysis — supporting the "reviewer fatigue → shallow review" argument.
+## F. Counter evidence (cited honestly)
 
----
+**GitHub Octoverse 2024**
+- **PR rejection rates have *not* risen** despite 1.4M new open-source contributors joining in 2024.
+- This is in tension with our "AI slop is overwhelming maintainers" thesis.
+- Why we cite it: directly contradicts our framing. Citing it makes the project visibly more honest. The hypothesis we want to test in the short report is that rejection rates can stay flat if reviewers stop reviewing carefully, so the better metric would be reviewer effort per PR — which the Faros AI / DORA data does say has worsened.
+- URL: https://github.blog/news-insights/octoverse/octoverse-2024/
 
-## D. Open source and ecosystem impact
+## G. Open source ecosystem
 
-### 13. The New Stack — "96% of codebases rely on open source, and AI slop is putting them at risk" (2025)
-- **What it is.** Reporting on the AI slop crisis in open-source ecosystems.
-- **Key facts we use.**
-  - 96% of modern codebases depend on open-source components.
-  - 60% of OSS maintainers are unpaid volunteers.
-  - curl closed its bug bounty program after valid-report rate fell to ~5%.
+**The New Stack (2025) — *96% of Codebases Rely on Open Source, and AI Slop Is Putting Them at Risk***
+- 96% of modern codebases depend on open-source components.
+- 60% of OSS maintainers are unpaid volunteers.
+- curl closed its bug bounty after the valid-report rate fell to ~5%.
 
-### 14. LeadDev — "Open Source Has a Big AI Slop Problem" (2025)
-- **What it is.** Long-form feature on maintainer burnout from AI-generated contributions.
-- **Key claim.** **"It takes a reviewer 12 times longer to review and correct a pull request than to generate one with AI."**
-- **Why it matters.** The single most quotable line on the maintainer economic problem.
+**LeadDev (2025) — *Open Source Has a Big AI Slop Problem***
+Source of the most quoted line on the maintainer economics: **"it takes a reviewer 12 times longer to review and correct a pull request than to generate one with AI."**
 
-### 15. All Things Open — "The AI Slop Problem Threatening Open Source Maintainers" (2025)
-- **What it is.** Community-facing analysis of specific projects hit hardest (curl, Ghostty).
+**The Register (Feb 2026) — *GitHub Ponders Kill Switch for Pull Requests to Stop AI Slop***
+Concrete sign that platform-level interventions are now under serious consideration.
 
-### 16. GitHub Blog — "What to Expect for Open Source in 2026"
-- **What it is.** GitHub's own projection of how AI will reshape open-source contribution norms in 2026.
-- **Key claim.** GitHub is evaluating restrictions on pull requests as a systemic response.
+## H. Offensive security context
 
-### 17. The Register — "GitHub Ponders Kill Switch for Pull Requests to Stop AI Slop" (Feb 2026)
-- **What it is.** News coverage of GitHub's internal deliberations on disabling or restricting PR functionality.
-- **Why it matters.** Concrete sign that ecosystem-level responses are being seriously considered.
+**Deloitte (2026) — *Global Software Industry Outlook***
+- "AI could potentially drive productivity gains of 30% to 35% across the SDLC."
+- More importantly for us: in late 2025, attackers used jailbroken AI tools where "about 80% to 90% of the agentic attack was conducted without any human involvement."
+- Why we cite it: introduces the *offensive* angle into our security thread. AI is accelerating attackers, not just defenders.
+- URL: https://www.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/software-industry-outlook.html
 
-### 18. Open Source For You — "GitHub Weighs Pull Request Kill Switch As AI Slop Floods Open Source" (Feb 2026)
-- Parallel reporting on the same GitHub kill-switch discussion.
+## I. Historical anchor
 
-### 19. CodeRabbit — "AI Is Burning Out the People Who Keep Open Source Alive"
-- **What it is.** Long-form analysis of the maintainer mental-health dimension of AI slop.
+**Bloomberg (May 2023) — *Samsung Bans ChatGPT and Other Generative AI Use by Staff After Leak***
+Canonical reporting on the April 2023 Samsung incident: engineers pasted proprietary semiconductor source code into ChatGPT three separate times within three weeks; Samsung banned generative AI on company devices in response.
+- Why we cite it: shows the security risks we are documenting in 2025–2026 are not new, they are an old known problem the industry has not solved.
+- URL: https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak
 
-### 20. ITPro — "Big Tech Is Clamping Down on Open Source 'AI Slop' Reports"
-- **Key fact.** OpenAI, Anthropic, AWS, Google, Microsoft and GitHub have committed $12.5M to Alpha-Omega / OpenSSF to eliminate AI slop bug reports.
+## J. Incident reporting (Clawdbot / OpenClaw)
+
+Full timeline in `use-cases.md`. Primary sources we lean on:
+- **Palo Alto Networks Unit 42** — security analysis, the most authoritative source.
+- **DEV Community timeline post** — most complete narrative reconstruction of the rename / hijack / cascade week.
+
+Secondary corroborating sources (Kaspersky, CyberNews, Axios news outlet, Bitdefender) we treat as supporting context.
 
 ---
 
-## E. The Clawdbot / Moltbot / OpenClaw incident (late 2025 – early 2026)
-This incident is significant enough that we treat it as its own case in `use-cases.md`. Key sources:
+## Sources we evaluated and rejected
 
-### 21. Palo Alto Networks (Unit 42) — "OpenClaw (formerly Moltbot, Clawdbot) May Signal the Next AI Security Crisis"
-- Security-vendor analysis of the architectural risks.
+These sources came up during research but are not load-bearing in the draft. Reasoning for each is in `source-evaluation.md`.
 
-### 22. Kaspersky — "Key OpenClaw risks, Clawdbot, Moltbot"
-- Enterprise risk management framing.
+- **Faros AI (2025)** — vendor blog summarising DORA. Redundant once we are citing DORA directly.
+- **CodeRabbit (2025) 470 PR study** — same point as Snyk with less authority. Snyk is the stronger source.
+- **LogRocket (2025)** — practitioner blog, no primary data.
+- **Help Net Security / CodeRabbit (Dec 2025)** — same.
+- **All Things Open (2025)** — covers the same incidents as The New Stack and LeadDev. Triangulation we don't need at draft stage.
+- **ITPro (2026) on the $12.5M OpenSSF pledge** — we don't cite the pledge in the body any more.
+- **CMU study (Dec 2025) via Bowley blog** — we never read the original paper. Honest move is to drop until we do.
+- **LeadDev (2025) "How AI Generated Code Accelerates Technical Debt"** — practitioner-level explanation. Redundant with GitClear.
+- **Pragmatic Engineer (March 2026) "AI Tooling for Software Engineers in 2026"** — adoption data only. Redundant with DORA and Octoverse 2025.
+- **Eventually Making (Feb 2026)** — practitioner blog, no primary data.
+- **Baytech Consulting (2025)** — vendor pitch. Triple-counts the Faros AI 91% number through two layers of vendor PR.
+- **Gartner "AI Agents Transforming Software Engineering"** — too generic to lean on.
+- **PCMag Samsung coverage (2023)** — secondary outlet for the same incident Bloomberg covered.
 
-### 23. CyberNews — "AI Agent Tried to Ruin Developer's Reputation Just Because He Said No"
-- Incident report on agent-driven harassment behavior.
+## Sources we still want to read before the short report
 
-### 24. DEV Community — "From Clawdbot to Moltbot: How a C&D, Crypto Scammers, and 10 Seconds of Chaos Took Down the Internet's Hottest AI Project"
-- Timeline and social-engineering dimension.
-
-### 25. Axios (news outlet) — Reporting that hundreds of Moltbot control interfaces were left accessible on the open internet, exposing chat logs, API keys, and remote command execution capability. Confirmed independently by Bitdefender.
-
----
-
-## F. Academic baselines (pre-2025) referenced for context only
-- Perry, D. et al. — "Do Users Write More Insecure Code with AI Assistants?" (Stanford, 2023). Early academic evidence that AI assistant users produce more insecure code while believing the opposite.
-- GitClear 2024 — "Coding on Copilot: 2023 Data Suggests Downward Pressure on Code Quality" — the precursor to the 2025 report; establishes the multi-year trend line.
+- **Perry et al. (CCS 2023, Stanford) — *Do Users Write More Insecure Code with AI Assistants?*** The classic academic baseline. Citing it without having read the original is the kind of thing a sharp lecturer might call out, so we are deferring it until we read the paper.
+- **The full DORA 2025 report.** We are currently working from the Faros AI summary and the InfoQ writeup.
 
 ---
 
 ## Synthesis
+Five threads converge across the literature we are using:
 
-Taken together, the 2025–2026 literature supports a consistent four-part story:
+1. **Quality is drifting down** (GitClear).
+2. **Security is flat at a bad baseline** — ~45%, unchanged with model scale (Veracode, Snyk).
+3. **Humans accept wrong AI output** — the mechanism by which the bad baseline reaches production (Kabir et al.).
+4. **Review is the new bottleneck** (DORA).
+5. **Open source absorbs the largest share of the cost** — but the picture is contested: curl and similar incidents on one side, Octoverse 2024's flat PR rejection rate on the other (LeadDev, The New Stack, The Register, Octoverse 2024).
 
-1. **Quality.** AI-generated code is measurably more duplicated, churned, and less refactored than pre-AI code — and the effect has grown year over year (GitClear, CMU, LeadDev).
-2. **Security.** ~45% of AI-generated code has high-severity vulnerabilities; AI PRs contain 2.74x more vulns than human PRs; this hasn't improved with model scale (Veracode, Snyk, CodeRabbit).
-3. **Review.** Review capacity is the new bottleneck — PR volume up 98%, review time up 91% (Faros, DORA 2025, LogRocket).
-4. **Ecosystem.** Open-source is bearing the brunt; several high-profile projects have made extreme defensive responses (curl, Ghostty, GitHub's kill-switch deliberation), and $12.5M of industry funding is being directed at the slop problem (LeadDev, The New Stack, The Register, ITPro).
-
-These four threads define the problem space Task 2 will probe with a concrete case study.
+These define the problem space Task 2 will probe with a hands-on case study.
