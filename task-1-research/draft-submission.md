@@ -2,9 +2,7 @@
 
 
 ## Topic & Motivation
-We study how AI coding assistants affect code quality and security in real projects. AI made writing code cheap, but checking it is not. Teams that adopt AI ship more code than reviewer capacity can handle so the bottleneck is moving from writing to reviewing.
-
-Also, a large share of AI generated code has high severity vulnerabilities, and that has not significantly improved as the AI tools get better. A CHI study from 2023 (Kabir et al.) found that ChatGPT users accept incorrect programming answers often. So, again, bad code gets produced faster than the people meant to catch it can keep up.
+We study how AI coding assistants affect code quality and security in real projects. AI made writing code cheap, but checking it is not. A large share of AI generated code still has high severity vulnerabilities, and that has not significantly improved as the tools get better. Teams that adopt AI ship more code than reviewer capacity can handle, so the bottleneck is moving from writing to reviewing.
 
 ### Challenge 1: Quality and security drift
 What AI puts into the codebase is buggier and more duplicated than what it replaced. For this challenge we found a struggle case and a proposed solution in the industry:
@@ -18,5 +16,7 @@ When bad code is produced, the people meant to catch it are buried in volume. Op
 - (*Struggle*) **curl bug bounty closure (2025).** curl had a bug report program where people could report security bugs for a reward. The program got flooded with AI generated reports that sounded professional but were almost all wrong. The maintainer tried adding stricter rules and examples of what not to submit, but nothing helped, so he shut the program down entirely.
 - (*Proposed solution*) **Google's internal review tooling.** Google's code review tooling reports 97% engineer satisfaction. They have layered ML on top: an AutoCommenter trained on around 3 billion examples to flag best practice violations, and a "critic" feature in their Jules coding assistant that critiques AI generated code while it is being produced.
 
-### Note
-For both challenges, there are probably many more cases of struggle. The proposed solutions we found work, but they each address only a part of the challenge. No single solution we came across covers a whole challenge on its own. This is one of the things we want to explore further in Task 2.
+### Discussion
+
+Both solutions work but only cover part of their challenge. Dependabot fixes known dependency vulnerabilities, but the Clawdbot case was exposed credentials and open interfaces, things no dependency scanner would catch. Google's review tooling shows what automation can do, but it depends on Google's scale, something a one person project like curl cannot replicate. No single solution covers a whole challenge on its own, and the ones that exist require resources the projects most at risk do not have. This is what we want to explore further in Task 2.
+

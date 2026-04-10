@@ -18,8 +18,8 @@ _The team works on everything together. Budget: about 4 to 6 hours per week, tot
 
 #### Week 1 — Apr 6–12
 - [x] Register team on Moodle
-- [ ] Read and sign off on the Task 1 files together
-- [ ] **Submit Task 1.3 draft on Moodle (Sun Apr 12)**
+- [x] Read and sign off on the Task 1 files together
+- [x] **Submit Task 1.3 draft on Moodle (Sun Apr 12)**
 
 #### Week 2 — Apr 13–19
 - [ ] Pick the open source repo for the case study

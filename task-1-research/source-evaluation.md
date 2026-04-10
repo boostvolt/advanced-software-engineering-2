@@ -17,7 +17,7 @@ For each source: **what it is**, **what it actually contains**, and a **relevanc
 | 5 | Deloitte 2026 software industry outlook | **Medium** | Adds the agentic AI cyber attack angle and the 80% team restructuring claim |
 | 6 | Octoverse 2025 | **Medium to High** | Adoption baseline plus Dependabot fix time data |
 | 7 | Octoverse 2024 | **High (contrarian)** | GitHub's own data says quality has *not* dropped. Cite it explicitly |
-| 8 | Kabir et al. 2023, "Is Stack Overflow Obsolete?" (arxiv 2308.02312) | **High (academic)** | Peer reviewed evidence on AI code correctness *and* human overconfidence |
+| 8 | Kabir et al. 2024, "Is Stack Overflow Obsolete?" (arxiv 2308.02312) | **High (academic)** | Peer reviewed evidence on AI code correctness *and* human overconfidence |
 | 9 | Eventually Making, AI impact on SWE in 2026 | **Skip** | Practitioner blog, no primary data |
 | 10 | Baytech Consulting, Unlocking 2026 | **Skip** | Vendor pitch, redundant with Faros AI |
 | 11 | PCMag, Samsung ChatGPT ban | **Medium (use as the secondary)** | Samsung 2023 incident, corroborating outlet |
@@ -122,7 +122,7 @@ That paragraph alone would lift the draft's grade.
 
 ---
 
-### 8. Kabir et al. (2023), "Is Stack Overflow Obsolete? An Empirical Study of the Characteristics of ChatGPT Answers to Stack Overflow Questions" (arxiv 2308.02312)
+### 8. Kabir et al. (2024), "Is Stack Overflow Obsolete? An Empirical Study of the Characteristics of ChatGPT Answers to Stack Overflow Questions" (arxiv 2308.02312)
 
 **URL:** https://arxiv.org/pdf/2308.02312
 
@@ -190,7 +190,7 @@ That paragraph alone would lift the draft's grade.
 
 ## What this changes for the draft
 
-If we adopt the high relevance items (Octoverse 2024, Kabir et al. 2023, Octoverse 2025, plus the Samsung incident from Bloomberg and Deloitte's autonomous attack angle), the draft gains:
+If we adopt the high relevance items (Octoverse 2024, Kabir et al. 2024, Octoverse 2025, plus the Samsung incident from Bloomberg and Deloitte's autonomous attack angle), the draft gains:
 
 1. **A peer reviewed academic citation** (Kabir et al.) which the current draft is missing.
 2. **A contrarian data point** (Octoverse 2024 PR rejection rates) which makes the project look academically honest.
