@@ -20,3 +20,10 @@ When bad code is produced, the people meant to catch it are buried in volume. Op
 
 Both solutions work but only cover part of their challenge. Dependabot fixes known dependency vulnerabilities, but the Clawdbot case was exposed credentials and open interfaces, things no dependency scanner would catch. Google's review tooling shows what automation can do, but it depends on Google's scale, something a one person project like curl cannot replicate. No single solution covers a whole challenge on its own, and the ones that exist require resources the projects most at risk do not have. This is what we want to explore further in Task 2.
 
+### Literature
+
+- GitHub, *Octoverse 2025* (2025). Dependabot adoption and fix time data.
+- Engineer's Codex, *How Google Takes the Pain Out of Code Reviews, with 97% Dev Satisfaction* (2025). Google Critique, AutoCommenter, Jules critic.
+- Palo Alto Networks Unit 42, *OpenClaw May Signal the Next AI Security Crisis* (2026). Clawdbot incident analysis.
+- The New Stack, *96% of Codebases Rely on Open Source, and AI Slop Is Putting Them at Risk* (2025). curl bug bounty context.
+
