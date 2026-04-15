@@ -24,7 +24,7 @@ _The team works on everything together. Budget: about 4 to 6 hours per week, tot
 #### Week 2 — Apr 13–19
 - [ ] **Check-In 1 with lecturer (Wed Apr 15): discuss draft, get feedback**
 - [ ] Compare candidate tools (CodeRabbit, Semgrep, Snyk Code, Aikido, Copilot PR review, SonarQube) and document why each fits or doesn't
-- [ ] Pick the tool and the open source repo
+- [ ] Pick the tool and the case study project
 - [ ] Set up the case study repo under `task-2-case-study/implementation/`
 
 #### Week 3 — Apr 20–26
