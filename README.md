@@ -18,19 +18,26 @@ _The team works on everything together. Budget: about 4 to 6 hours per week, tot
 
 #### Week 1 — Apr 6–12
 - [x] Register team on Moodle
-- [x] Read and sign off on the Task 1 files together
+- [x] Create draft repository structure (galingpab)
+- [x] Discuss topic, motivation, challenges, and approach (all)
+- [x] Create draft itself (matamar)
+- [x] Read and sign off on the Task 1 draft together (all)
 - [x] **Submit Task 1.3 draft on Moodle (Sun Apr 12)**
 
 #### Week 2 — Apr 13–19
-- [ ] **Check-In 1 with lecturer (Wed Apr 15): discuss draft, get feedback**
-- [ ] Compare candidate tools (CodeRabbit, Semgrep, Snyk Code, Aikido, Copilot PR review, SonarQube) and document why each fits or doesn't
-- [ ] Pick the tool and the case study project
-- [ ] Set up the case study repo under `task-2-case-study/implementation/`
+- [x] **Check-In 1 with lecturer (Wed Apr 15): discuss draft, get feedback**
+  - Feedback: back up claims (e.g. "AI code has high severity vulnerabilities") with sources AND later case study
+  - Teacher confirmed the human-vs-AI approach leveraging the first-semester Java Catan game
+- [ ] **matamar:** Enrich Task 1 draft with sources for unsubstantiated claims + rebuild the first-semester Java Catan game with Claude Opus (human vs AI comparison)
+- [ ] **kottjan01:** Survey tools (Dependabot, Jules, GitHub Security Agent, SonarQube, etc.), document what each solves and misses, find an OSS project to test them on
+- [ ] **galinpab:** Draft a concept for the class activity (Task 4: ~10 min, interactive, original)
+- daotro01 unavailable (military).
 
 #### Week 3 — Apr 20–26
 - [ ] **Check-In 2 with lecturer (Wed Apr 22): present tool and repo choice**
-- [ ] Run the tool against the case study repo
-- [ ] Save results and notes in `task-2-case-study/results/`
+- [ ] Pick the best tool from kottjan01's survey and apply it to the Catan case study (human-made vs Claude Opus generated)
+- [ ] Save scan results and comparison notes in `task-2-case-study/results/`
+- [ ] Discuss galinpab's activity concept as a team and refine it
 
 #### Week 4 — Apr 27–May 3
 - [ ] **Check-In 3 with lecturer (Wed Apr 29): present preliminary results**
