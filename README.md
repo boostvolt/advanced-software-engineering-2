@@ -22,32 +22,35 @@ _The team works on everything together. Budget: about 4 to 6 hours per week, tot
 - [x] **Submit Task 1.3 draft on Moodle (Sun Apr 12)**
 
 #### Week 2 — Apr 13–19
-- [ ] Pick the open source repo for the case study
-- [ ] Pick the Task 2 tool (one from: CodeRabbit, Semgrep, Snyk Code, Aikido, Copilot PR review, SonarQube)
+- [ ] **Check-In 1 with lecturer (Wed Apr 15): discuss draft, get feedback**
+- [ ] Compare candidate tools (CodeRabbit, Semgrep, Snyk Code, Aikido, Copilot PR review, SonarQube) and document why each fits or doesn't
+- [ ] Pick the tool and the open source repo
 - [ ] Set up the case study repo under `task-2-case-study/implementation/`
 
 #### Week 3 — Apr 20–26
+- [ ] **Check-In 2 with lecturer (Wed Apr 22): present tool and repo choice**
 - [ ] Run the tool against the case study repo
 - [ ] Save results and notes in `task-2-case-study/results/`
 
 #### Week 4 — Apr 27–May 3
-- [ ] Write the reflection (one file is fine, can split later if needed)
-- [ ] Write the short report draft (2 to 5 pages)
+- [ ] **Check-In 3 with lecturer (Wed Apr 29): present preliminary results**
+- [ ] Write the short report draft (weave the reflection into the report, not separate)
+- [ ] Start slides outline
 
 #### Week 5 — May 4–10
 - [ ] Polish the short report and export to PDF
 - [ ] **Submit short report on Moodle (Tue May 5)**
-- [ ] Sketch the class activity and the slides outline
+- [ ] Wed May 6 class session: read other teams' reports, get assigned discussion report
+- [ ] Build slides and prepare live demo of the tool
 
 #### Week 6 — May 11–17
-- [ ] Build the slides and the activity materials
-- [ ] Read the assigned team's report and write the discussion slide
-- [ ] One rehearsal of the presentation
+- [ ] Finish slides, activity materials, and discussion slide
+- [ ] Rehearsal
+- [ ] **Presentation day: Wed May 13**
 
 #### Week 7 — May 18–19
-- [ ] Final pass on everything
+- [ ] Final pass on all deliverables
 - [ ] **Submit all deliverables on Moodle (Tue May 19)**
-- [ ] Presentation day (confirm date with lecturers in advance)
 
 ## Generate PDF
 
