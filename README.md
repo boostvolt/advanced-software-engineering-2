@@ -14,7 +14,7 @@ The Task 1.3 draft submitted on Sunday Apr 12 is at [task-1-research/draft-submi
 
 ## Weekly plan
 
-_The team works on everything together. Budget: about 4 to 6 hours per week, total. Each week is one focused session._
+_Budget: about 3 to 4 hours per person per week. Independent tasks are split across members; shared tasks are done together._
 
 #### Week 1 — Apr 6–12
 - [x] Register team on Moodle
@@ -30,33 +30,39 @@ _The team works on everything together. Budget: about 4 to 6 hours per week, tot
   - Teacher confirmed the human-vs-AI approach leveraging the first-semester Java Catan game
 - [ ] **matamar:** Enrich Task 1 draft with sources for unsubstantiated claims + rebuild the first-semester Java Catan game with Claude Opus (human vs AI comparison)
 - [ ] **kottjan01:** Survey tools (Dependabot, Jules, GitHub Security Agent, SonarQube, etc.), document what each solves and misses, find an OSS project to test them on
-- [ ] **galinpab:** Draft a concept for the class activity (Task 4: ~10 min, interactive, original)
-- daotro01 unavailable (military).
+- [ ] **galinpab:** Draft a concept for a class activity (~5 min, interactive, original)
+- [ ] **daotro01:** Make his code review activity idea concrete (show good/bad code, class reviews it, compare with AI verdict; ~5 min)
+- daotro01 limited availability (military).
 
 #### Week 3 — Apr 20–26
 - [ ] **Check-In 2 with lecturer (Wed Apr 22): present tool and repo choice**
-- [ ] Pick the best tool from kottjan01's survey and apply it to the Catan case study (human-made vs Claude Opus generated)
-- [ ] Save scan results and comparison notes in `task-2-case-study/results/`
-- [ ] Discuss galinpab's activity concept as a team and refine it
+- [ ] **matamar + kottjan01:** Pick the best tool from the survey and run it on both Catan implementations (human-made vs Claude Opus generated)
+- [ ] **daotro01:** Help run tools and document scan results in `task-2-case-study/results/`
+- [ ] Discuss both activity drafts as a team (daotro01's code review activity + galinpab's idea) and refine them (all)
 
 #### Week 4 — Apr 27–May 3
 - [ ] **Check-In 3 with lecturer (Wed Apr 29): present preliminary results**
-- [ ] Write the short report draft (weave the reflection into the report, not separate)
-- [ ] Start slides outline
+- [ ] **matamar:** Write the short report draft (Tasks 1 + 2 combined, 2 to 5 pages)
+- [ ] **daotro01:** Write Task 2 reflection docs (decision rationale, difficulties, tradeoffs, limitations, future work)
+- [ ] **kottjan01:** Review report draft for technical accuracy on tool findings
+- [ ] **daotro01 + galinpab:** Make both activities concrete and presentation-ready
 
 #### Week 5 — May 4–10
-- [ ] Polish the short report and export to PDF
-- [ ] **Submit short report on Moodle (Tue May 5)**
-- [ ] Wed May 6 class session: read other teams' reports, get assigned discussion report
-- [ ] Build slides and prepare live demo of the tool
+- [ ] **matamar:** Polish short report, export to PDF, **submit on Moodle (Tue May 5)**
+- [ ] Wed May 6 class session: read other teams' reports, get assigned discussion report (all)
+- [ ] **kottjan01:** Build presentation slides and prepare live demo of the tool
+- [ ] **daotro01:** Read assigned team's report, draft discussion slide (Task 6)
+- [ ] **daotro01 + galinpab:** Finalize both activities for presentation day
 
 #### Week 6 — May 11–17
-- [ ] Finish slides, activity materials, and discussion slide
-- [ ] Rehearsal
+- [ ] Rehearsal (all)
+- [ ] **kottjan01:** Finish slides
+- [ ] **daotro01 + galinpab:** Finish activity materials
+- [ ] **daotro01:** Finish discussion slide
 - [ ] **Presentation day: Wed May 13**
 
 #### Week 7 — May 18–19
-- [ ] Final pass on all deliverables
+- [ ] Final pass on all deliverables (all)
 - [ ] **Submit all deliverables on Moodle (Tue May 19)**
 
 ## Generate PDF
