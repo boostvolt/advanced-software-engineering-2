@@ -37,7 +37,7 @@ _Budget: about 3 to 4 hours per person per week. Independent tasks are split acr
 - [x] **Check-In 2 with lecturer (Wed Apr 22): present tool and repo choice**
   - Teacher approved the two-phase Task 2 (Node.js bench justifies tool, Catan tests the claim)
   - Teacher approved full catan task scope for both Catan impls
-- [ ] **matamar:** Rebuild the first-semester Java Catan game with Claude Opus via `task-2-case-study/implementation/PROMPT.md`.
+- [x] **matamar:** Rebuild the first-semester Java Catan game with Claude Opus via `task-2-case-study/implementation/PROMPT.md`. Output in `catan-ai/`, `mvn test` passes 8/8, `GENERATION_LOG.md` records the reflection.
 - [x] **matamar:** Start the short report draft in `task-3-report/short-report-draft.md` — Task 1 content enriched, Case study section added with methodology and two-phase tool approach. Findings and reflection stubbed until scans arrive.
 - [ ] **kottjan01:** Evaluate GitHub's security stack (Dependabot, Code Security, Secret Protection, Copilot code review / Dependency Review) against a Node.js bench project. Two deliverables: (a) capability comparison table for the presentation, (b) one tool selected for the Catan case study. Selection criterion: among tools that actually produce findings on a Java codebase like Catan, which is strongest.
 - [ ] **daotro01 + galinpab:** Finalize both activities (daotro01's code review + galinpab's "AI explains code"), team discussion to refine. Target: presentation-ready by Check-In 3 (Wed Apr 29).
