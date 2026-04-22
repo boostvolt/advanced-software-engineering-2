@@ -2,7 +2,7 @@
 
 ## What we are doing
 
-We are probing the Task 1 finding that AI generated code carries measurable quality and security debt (Veracode 45% high severity vuln rate, GitClear 4x code clones, Snyk 2.74x vulnerability rate in AI co authored PRs). The probe is concrete: we take the same specification and produce two implementations of it, then run the same security/quality tool on both and compare findings.
+We are probing the Task 1 finding that AI generated code carries measurable quality and security debt (Veracode 45% high severity vuln rate and 2.74x more vulnerabilities than human written code, GitClear 4x code clones). The probe is concrete: we take the same specification and produce two implementations of it, then run the same security/quality tool on both and compare findings.
 
 **Specification:** PM1 Projekt 3, the first semester ZHAW Catan assignment. Source PDFs in `spec/`.
 

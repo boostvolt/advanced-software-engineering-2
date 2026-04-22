@@ -1,19 +1,19 @@
 # The Effects of AI Assisted Software Engineering on Code Quality and Security
 
 ## Topic & Motivation
-We study how AI coding assistants affect code quality and security in real projects. AI made writing code cheap, but checking it is not. A large share of AI generated code still has high severity vulnerabilities, and that has not significantly improved as the tools get better [1]. Teams that adopt AI ship more code than reviewer capacity can handle, so the bottleneck is moving from writing to reviewing [2].
+We study how AI coding assistants affect code quality and security in real projects. AI made writing code cheap, but checking it is not. A large share of AI generated code still has high severity vulnerabilities, and that has not significantly improved as the tools get better [1]. The Google DORA 2025 State of AI-Assisted Software Development reports that AI adoption is now near universal (90% of software professionals, median two hours a day) and correlates with decreased software delivery stability [9]. Teams that adopt AI ship more code than reviewer capacity can handle, so the bottleneck is moving from writing to reviewing [2]. A peer reviewed study of 517 programming questions to ChatGPT found that 52% of its answers contained incorrect information, yet users still preferred them 35% of the time and missed the errors in 39% of cases [10].
 
 ### Challenge 1: Quality and security drift
-What AI puts into the codebase is buggier and more duplicated than what it replaced [3, 4]. We found two independent cases in the industry:
+What AI puts into the codebase is buggier and more duplicated than what it replaced [1, 3]. We found two independent cases in the industry:
 
-- (*Failure case*) **Clawdbot / OpenClaw** Viral open source AI agent project. Their GitHub organisation hijacked by crypto scammers and a large database was exposed. The code shipped with open control interfaces and exposed credentials, and viral growth meant nobody had time to fix it. Every prevention tool that should have caught it already existed, but none operated at the speed required [5, 6].
-- (*Working case*) **GitHub Dependabot at scale.** Github Octoverse 2025 says that across 2.66 million repositories with Dependabot enabled, automated dependency vulnerability fix times collapsed from 200 to 300 days down to 30 to 50 days [7]. A working example of automation closing a security gap at scale.
+- (*Failure case*) **Clawdbot / OpenClaw** Viral open source AI agent project. Their GitHub organisation hijacked by crypto scammers and a large database was exposed. The code shipped with open control interfaces and exposed credentials, and viral growth meant nobody had time to fix it. Every prevention tool that should have caught it already existed, but none operated at the speed required [4, 5].
+- (*Working case*) **GitHub Dependabot at scale.** Github Octoverse 2025 says that across 2.66 million repositories with Dependabot enabled, automated dependency vulnerability fix times collapsed from 200 to 300 days down to 30 to 50 days [6]. A working example of automation closing a security gap at scale.
 
 ### Challenge 2: Review cannot keep up
 These quality problems get worse because review cannot keep up. When bad code is produced, the people meant to catch it are buried in volume [2]. Open source maintainers are hit hardest, and this is how the bad code reaches production. We found two independent cases in the industry:
 
-- (*Failure case*) **curl bug bounty closure (2025).** curl had a bug report program where people could report security bugs for a reward. The program got flooded with AI generated reports that sounded professional but were almost all wrong. The maintainer tried adding stricter rules and examples of what not to submit, but nothing helped, so he shut the program down entirely [2, 8].
-- (*Working case*) **Google's internal review tooling.** Google's code review tooling reports 97% engineer satisfaction. They have layered ML on top: an AutoCommenter trained on around 3 billion examples to flag best practice violations, and a "critic" feature in their Jules coding assistant that critiques AI generated code while it is being produced [9].
+- (*Failure case*) **curl bug bounty closure (2025).** curl had a bug report program where people could report security bugs for a reward. The program got flooded with AI generated reports that sounded professional but were almost all wrong. The maintainer tried adding stricter rules and examples of what not to submit, but nothing helped, so he shut the program down entirely [2, 7].
+- (*Working case*) **Google's internal review tooling.** Google's code review tooling reports 97% engineer satisfaction. They have layered ML on top: an AutoCommenter trained on around 3 billion examples to flag best practice violations, and a "critic" feature in their Jules coding assistant that critiques AI generated code while it is being produced [8].
 
 ### Discussion
 
@@ -29,24 +29,32 @@ To probe the gaps above, we take the same specification and produce two implemen
 
 **Tool selection.** In two phases. First, GitHub's security stack (Dependabot, Code Security, Secret Protection, Copilot code review, Dependency Review) is evaluated on a separate Node.js project that exercises the tools' capabilities more fully than a small offline Java game would. The selected tool is then applied to both Catan implementations. The Node.js project justifies the tool choice; Catan tests the Task 1 claim that AI generated code carries more quality and security debt than human written code of equivalent scope.
 
-**Findings and reflection.** *To be added once scans are complete.*
+**Preliminary findings (pre-scan).** The AI version is materially smaller than the human version at the same specification. Main source is 1,108 lines against the human's 2,718 (40%); test source is 260 lines against 2,060 (13%). The AI omits a Road class (roads are two-character strings on hex edges), omits an abstract Structure base, and concentrates most logic in a single `SiedlerGame` class of 435 lines. Claude Opus produced this runnable 30-point implementation in roughly ten minutes of wall-clock time; the human repository's commit history spans weeks. The asymmetry in production speed relative to verification surface (test-to-main LOC ratio of 0.23 against 0.76) is the Task 1 motivation shown in miniature: AI-assisted production is much cheaper than AI-assisted verification.
+
+**Scan findings.** *[Tool]* was run against both codebases on *[date]*. *[Count]* findings on the human side, *[count]* on the AI side, broken down by category in Table *[n]*.
+
+**Interpretation.** *[How the findings relate to the Task 1 claim that AI generated code carries more quality and security debt than human written code.]* The AI side has a test to main LOC ratio of 0.23 against 0.76 for the human side, and it omits the Road class and the abstract Structure base, so the scan surface is not the same on both sides. A raw finding count is therefore not a like for like comparison, and we read the results with that in mind.
+
+**Limitations.** Single specification, single human team, single AI model, single prompt, single tool. The findings are suggestive, not generalisable. A fuller study would require multiple prompts, multiple models, and multiple specifications.
 
 ### Literature
 
-[1] Veracode, *2025 GenAI Code Security Report* (2025). Vulnerability rates across 100+ LLMs. https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/
+[1] Veracode, *2025 GenAI Code Security Report* (2025). 100+ LLMs evaluated; 45% of AI generated code contains at least one high severity vulnerability, and AI generated code carries 2.74x more vulnerabilities than human written code. https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/
 
 [2] LeadDev, *Open Source Has a Big AI Slop Problem* (2025). 12x reviewer asymmetry. https://leaddev.com/software-quality/open-source-has-a-big-ai-slop-problem
 
 [3] GitClear, *AI Copilot Code Quality: 2025 Data Suggests 4x Growth in Code Clones* (2025). Code duplication trends across 211M changed lines. https://www.gitclear.com/ai_assistant_code_quality_2025_research
 
-[4] Snyk, *AI Co Authored Pull Request Vulnerability Analysis* (2025). 2.74x more vulnerabilities in AI co authored PRs.
+[4] Palo Alto Networks Unit 42, *OpenClaw May Signal the Next AI Security Crisis* (2026). Clawdbot security analysis. https://www.paloaltonetworks.com/blog/network-security/why-moltbot-may-signal-ai-crisis/
 
-[5] Palo Alto Networks Unit 42, *OpenClaw May Signal the Next AI Security Crisis* (2026). Clawdbot security analysis. https://www.paloaltonetworks.com/blog/network-security/why-moltbot-may-signal-ai-crisis/
+[5] Sivaram, P.G., *From Clawdbot to Moltbot* (2026). DEV Community. Clawdbot incident timeline. https://dev.to/sivarampg/from-clawdbot-to-moltbot-how-a-cd-crypto-scammers-and-10-seconds-of-chaos-took-down-the-4eck
 
-[6] Sivaram, P.G., *From Clawdbot to Moltbot* (2026). DEV Community. Clawdbot incident timeline. https://dev.to/sivarampg/from-clawdbot-to-moltbot-how-a-cd-crypto-scammers-and-10-seconds-of-chaos-took-down-the-4eck
+[6] GitHub, *Octoverse 2025* (2025). Dependabot adoption and fix time data. https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/
 
-[7] GitHub, *Octoverse 2025* (2025). Dependabot adoption and fix time data. https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/
+[7] The New Stack, *96% of Codebases Rely on Open Source, and AI Slop Is Putting Them at Risk* (2025). curl bug bounty context. https://thenewstack.io/ai-slop-open-source/
 
-[8] The New Stack, *96% of Codebases Rely on Open Source, and AI Slop Is Putting Them at Risk* (2025). curl bug bounty context. https://thenewstack.io/ai-slop-open-source/
+[8] Engineer's Codex, *How Google Takes the Pain Out of Code Reviews, with 97% Dev Satisfaction* (2025). Google Critique, AutoCommenter, Jules critic. https://read.engineerscodex.com/p/how-google-takes-the-pain-out-of
 
-[9] Engineer's Codex, *How Google Takes the Pain Out of Code Reviews, with 97% Dev Satisfaction* (2025). Google Critique, AutoCommenter, Jules critic. https://read.engineerscodex.com/p/how-google-takes-the-pain-out-of
+[9] Google Cloud DORA, *2025 DORA State of AI-Assisted Software Development* (2025). AI adoption at 90% of software professionals, negative correlation with software delivery stability. https://dora.dev/research/2025/dora-report/
+
+[10] Kabir, S., Udo-Imeh, D.N., Kou, B., Zhang, T., *Is Stack Overflow Obsolete? An Empirical Study of the Characteristics of ChatGPT Answers to Stack Overflow Questions* (CHI 2024). 52% of ChatGPT answers to programming questions contain incorrect information; users prefer them 35% of the time and miss the errors 39% of the time. https://arxiv.org/pdf/2308.02312

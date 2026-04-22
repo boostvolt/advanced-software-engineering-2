@@ -26,9 +26,6 @@ Evaluation of 100+ LLMs across Java, JavaScript, Python, C#.
 - **Security performance is flat across model generations** — bigger models are not safer.
 - URL: https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/
 
-**Snyk (2025) — pull-request telemetry**
-**AI co-authored PRs contain 2.74x more vulnerabilities** than human-only PRs. Production data, not benchmarks.
-
 ## C. Code review and delivery metrics
 
 **Google Cloud DORA (2025) — *State of AI-Assisted Software Development***
@@ -56,15 +53,7 @@ We use this source for two separate claims:
 - **Proposed solution for quality and security drift (Dependabot).** Across 2.66 million repositories with Dependabot enabled, automated dependency vulnerability fix times collapsed from 200–300 days down to 30–50 days. Used in the draft as the proposed-solution case under Challenge 1.
 - URL: https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/
 
-## F. Counter evidence (cited honestly)
-
-**GitHub Octoverse 2024**
-- **PR rejection rates have *not* risen** despite 1.4M new open-source contributors joining in 2024.
-- This is in tension with our "review cannot keep up" thesis.
-- Why we cite it: directly contradicts our framing. Citing it makes the project visibly more honest. The hypothesis we want to test in the short report is that rejection rates can stay flat if reviewers stop reviewing carefully, so the better metric would be reviewer effort per PR.
-- URL: https://github.blog/news-insights/octoverse/octoverse-2024/
-
-## G. Open source ecosystem
+## F. Open source ecosystem
 
 **The New Stack (2025) — *96% of Codebases Rely on Open Source, and AI Slop Is Putting Them at Risk***
 - 96% of modern codebases depend on open-source components.
@@ -74,10 +63,7 @@ We use this source for two separate claims:
 **LeadDev (2025) — *Open Source Has a Big AI Slop Problem***
 Source of the most quoted line on the maintainer economics: **"it takes a reviewer 12 times longer to review and correct a pull request than to generate one with AI."**
 
-**The Register (Feb 2026) — *GitHub Ponders Kill Switch for Pull Requests to Stop AI Slop***
-Concrete sign that platform-level interventions are now under serious consideration.
-
-## H. Incident reporting (Clawdbot / OpenClaw)
+## G. Incident reporting (Clawdbot / OpenClaw)
 
 Primary sources we lean on:
 - **Palo Alto Networks Unit 42** — security analysis, the most authoritative source.
@@ -85,7 +71,7 @@ Primary sources we lean on:
 
 Secondary corroborating sources (Kaspersky, CyberNews, Axios news outlet, Bitdefender) are supporting context only.
 
-## I. Proposed solution for review bottleneck (Google)
+## H. Proposed solution for review bottleneck (Google)
 
 **Google's internal review tooling (Critique + AutoCommenter + Jules critic)**
 - Google's code review tool Critique reports 97% engineer satisfaction.
@@ -96,19 +82,12 @@ Secondary corroborating sources (Kaspersky, CyberNews, Axios news outlet, Bitdef
 
 ---
 
-## Sources not currently in the draft but kept for the short report
-
-These sources are in the bibliography and literature review but were cut from the draft during trimming. We may bring them back for the Task 3 short report if there is room.
-
-- **Deloitte (2026) — *Global Software Industry Outlook.*** Introduces the offensive security angle: attackers used jailbroken AI tools to run autonomous attack chains with minimal human involvement. Not in the draft because the offensive angle was cut to stay focused on quality and review, but relevant for the short report's security section. URL: https://www.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/software-industry-outlook.html
-- **Bloomberg (May 2023) — *Samsung Bans ChatGPT and Other Generative AI Use by Staff After Leak.*** Historical anchor showing the security risks are not new. Cut from the draft for space but useful as a one-sentence reference in the short report. URL: https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak
-
 ## Sources we evaluated and rejected
 
 These sources came up during research but are not load-bearing. Reasoning for each is in `source-evaluation.md`.
 
 - **Faros AI (2025)** — vendor blog summarising DORA. Redundant once we are citing DORA directly.
-- **CodeRabbit (2025) 470 PR study** — same point as Snyk with less authority.
+- **CodeRabbit (2025) 470 PR study** — vendor PR study, less authority than Veracode for the same point.
 - **LogRocket (2025)** — practitioner blog, no primary data.
 - **Help Net Security / CodeRabbit (Dec 2025)** — same.
 - **All Things Open (2025)** — covers the same incidents as The New Stack and LeadDev.
@@ -132,9 +111,9 @@ These sources came up during research but are not load-bearing. Reasoning for ea
 Five threads converge across the literature we are using:
 
 1. **Quality is drifting down** (GitClear).
-2. **Security is flat at a bad baseline** — ~45%, unchanged with model scale (Veracode, Snyk).
+2. **Security is flat at a bad baseline** — ~45%, unchanged with model scale; AI generated code carries 2.74x more vulnerabilities than human written code (Veracode).
 3. **Humans accept wrong AI output** — the mechanism by which the bad baseline reaches production (Kabir et al.).
 4. **Review is the new bottleneck** (DORA).
-5. **Open source absorbs the largest share of the cost** — but the picture is contested: curl and similar incidents on one side, Octoverse 2024's flat PR rejection rate on the other (LeadDev, The New Stack, The Register, Octoverse 2024).
+5. **Open source absorbs the largest share of the cost** (LeadDev, The New Stack, The Register).
 
 These define the problem space Task 2 will probe with a hands-on case study.

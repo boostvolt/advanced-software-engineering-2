@@ -1,6 +1,6 @@
-# Source evaluation: 12 candidate resources
+# Source evaluation: 11 candidate resources
 
-We were given a list of 12 external resources to consider for the project. This file evaluates each one against our actual research questions: AI's effects on **code quality**, **code security**, the **code review bottleneck**, real world **incidents**, and **open source ecosystem effects**.
+We were given a list of external resources to consider for the project. This file evaluates each one against our actual research questions: AI's effects on **code quality**, **code security**, the **code review bottleneck**, real world **incidents**, and **open source ecosystem effects**.
 
 For each source: **what it is**, **what it actually contains**, and a **relevance verdict** (high, medium, low, or skip), with a one line "if we use it, here is what it would back up".
 
@@ -16,12 +16,11 @@ For each source: **what it is**, **what it actually contains**, and a **relevanc
 | 4 | Pragmatic Engineer, AI tooling 2026 | **Low** | Redundant with DORA on adoption |
 | 5 | Deloitte 2026 software industry outlook | **Medium** | Adds the agentic AI cyber attack angle and the 80% team restructuring claim |
 | 6 | Octoverse 2025 | **Medium to High** | Adoption baseline plus Dependabot fix time data |
-| 7 | Octoverse 2024 | **High (contrarian)** | GitHub's own data says quality has *not* dropped. Cite it explicitly |
-| 8 | Kabir et al. 2024, "Is Stack Overflow Obsolete?" (arxiv 2308.02312) | **High (academic)** | Peer reviewed evidence on AI code correctness *and* human overconfidence |
-| 9 | Eventually Making, AI impact on SWE in 2026 | **Skip** | Practitioner blog, no primary data |
-| 10 | Baytech Consulting, Unlocking 2026 | **Skip** | Vendor pitch, redundant with Faros AI |
-| 11 | PCMag, Samsung ChatGPT ban | **Medium (use as the secondary)** | Samsung 2023 incident, corroborating outlet |
-| 12 | Bloomberg, Samsung ChatGPT ban | **Medium to High (use as the primary)** | Same incident, the canonical source |
+| 7 | Kabir et al. 2024, "Is Stack Overflow Obsolete?" (arxiv 2308.02312) | **High (academic)** | Peer reviewed evidence on AI code correctness *and* human overconfidence |
+| 8 | Eventually Making, AI impact on SWE in 2026 | **Skip** | Practitioner blog, no primary data |
+| 9 | Baytech Consulting, Unlocking 2026 | **Skip** | Vendor pitch, redundant with Faros AI |
+| 10 | PCMag, Samsung ChatGPT ban | **Medium (use as the secondary)** | Samsung 2023 incident, corroborating outlet |
+| 11 | Bloomberg, Samsung ChatGPT ban | **Medium to High (use as the primary)** | Same incident, the canonical source |
 
 ---
 
@@ -108,21 +107,7 @@ For each source: **what it is**, **what it actually contains**, and a **relevanc
 
 ---
 
-### 7. Octoverse 2024 (GitHub blog)
-
-**URL:** https://github.blog/news-insights/octoverse/octoverse-2024/
-
-**What it is.** GitHub's 2024 annual report. Most relevant finding for us: **"No rise in rejected pull requests despite 1.4 million new open source contributors, suggesting quality remains intact."**
-
-**Relevance.** **High, and specifically because it contradicts our thesis.** This is the most valuable source in the whole batch. GitHub's own data says PR rejection rates have *not* increased even as the contributor base has exploded. That is direct counter evidence to the AI slop / curl narrative we are building. Citing a source that contradicts our argument is the single best thing we can do to make the project look academically honest.
-
-**If we use it.** Add one paragraph either in the challenges section or in the "still loose" section: "Not all the data points the same way. GitHub's own Octoverse 2024 reports that PR rejection rates have not risen even as 1.4 million new contributors joined open source projects in 2024, which complicates the simple 'AI slop is overwhelming maintainers' picture. We need to reconcile this with the curl and Ghostty incidents, possibly by distinguishing between rejection rate (which can stay flat if maintainers just stop reviewing) and reviewer effort per PR (which the Faros AI data says has increased)."
-
-That paragraph alone would lift the draft's grade.
-
----
-
-### 8. Kabir et al. (2024), "Is Stack Overflow Obsolete? An Empirical Study of the Characteristics of ChatGPT Answers to Stack Overflow Questions" (arxiv 2308.02312)
+### 7. Kabir et al. (2024), "Is Stack Overflow Obsolete? An Empirical Study of the Characteristics of ChatGPT Answers to Stack Overflow Questions" (arxiv 2308.02312)
 
 **URL:** https://arxiv.org/pdf/2308.02312
 
@@ -140,7 +125,7 @@ That paragraph alone would lift the draft's grade.
 
 ---
 
-### 9. Eventually Making, "AI's Impact on the State of the Art in Software Engineering in 2026"
+### 8. Eventually Making, "AI's Impact on the State of the Art in Software Engineering in 2026"
 
 **URL:** https://eventuallymaking.io/p/ai-s-impact-on-the-state-of-the-art-in-software-engineering-in-2026
 
@@ -152,7 +137,7 @@ That paragraph alone would lift the draft's grade.
 
 ---
 
-### 10. Baytech Consulting, "Unlocking 2026: The Future of AI-Driven Software Development"
+### 9. Baytech Consulting, "Unlocking 2026: The Future of AI-Driven Software Development"
 
 **URL:** https://www.baytechconsulting.com/blog/unlocking-ai-software-development-2026
 
@@ -164,7 +149,7 @@ That paragraph alone would lift the draft's grade.
 
 ---
 
-### 11. PCMag, "Samsung Bans ChatGPT After Engineers Use It to Fix Proprietary Code"
+### 10. PCMag, "Samsung Bans ChatGPT After Engineers Use It to Fix Proprietary Code"
 
 **URL:** https://www.pcmag.com/news/samsung-bans-chatgpt-after-engineers-use-it-to-fix-proprietary-code
 
@@ -176,7 +161,7 @@ That paragraph alone would lift the draft's grade.
 
 ---
 
-### 12. Bloomberg, "Samsung Bans ChatGPT and Other Generative AI Use by Staff After Leak"
+### 11. Bloomberg, "Samsung Bans ChatGPT and Other Generative AI Use by Staff After Leak"
 
 **URL:** https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak
 
@@ -190,15 +175,14 @@ That paragraph alone would lift the draft's grade.
 
 ## What this changes for the draft
 
-If we adopt the high relevance items (Octoverse 2024, Kabir et al. 2024, Octoverse 2025, plus the Samsung incident from Bloomberg and Deloitte's autonomous attack angle), the draft gains:
+If we adopt the high relevance items (Kabir et al. 2024, Octoverse 2025, plus the Samsung incident from Bloomberg and Deloitte's autonomous attack angle), the draft gains:
 
 1. **A peer reviewed academic citation** (Kabir et al.) which the current draft is missing.
-2. **A contrarian data point** (Octoverse 2024 PR rejection rates) which makes the project look academically honest.
-3. **A historical anchor** (Samsung 2023) which shows the security thread is not a 2025 invention.
-4. **An offensive security angle** (Deloitte agentic AI attacks) which fills a gap in our security thread.
-5. **A "default for new developers" framing** (Octoverse 2025 80% Copilot adoption in first week) which is sharper than the DORA 90%.
+2. **A historical anchor** (Samsung 2023) which shows the security thread is not a 2025 invention.
+3. **An offensive security angle** (Deloitte agentic AI attacks) which fills a gap in our security thread.
+4. **A "default for new developers" framing** (Octoverse 2025 80% Copilot adoption in first week) which is sharper than the DORA 90%.
 
-Estimated effort to integrate all five into the current draft: about an hour. We can do it now or save it for the short report in May.
+Estimated effort to integrate all four into the current draft: about an hour. We can do it now or save it for the short report in May.
 
 ## What we should drop or never add
 

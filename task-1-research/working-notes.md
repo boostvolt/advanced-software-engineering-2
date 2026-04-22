@@ -40,7 +40,7 @@ Faros AI's 2025 analysis of more than 10,000 developers measured an **+98% incre
 
 ### 2.2 AI generated code carries measurable quality and security debt
 - **Quality.** GitClear (2025), based on 211 million changed lines from 2020 to 2024 across Google, Microsoft, Meta and enterprise repos, reports a **4 times increase in code clones**, with copy and paste exceeding refactoring ("moved" lines) for the first time. Two week churn rose from 5.5% to 7.9%. Bill Harding's term: **"AI induced tech debt"**.
-- **Security.** Veracode's 2025 GenAI Code Security Report (more than 100 LLMs across Java, JavaScript, Python and C#) finds that **around 45% of AI generated code contains at least one high severity vulnerability**, with Java failing 72% of security tasks and XSS defenses missing in 86% of relevant samples. Snyk's pull request telemetry shows that **AI co authored PRs contain 2.74 times more vulnerabilities** than human only PRs. Crucially, security performance has been **flat since 2022** even as model size has grown massively. Bigger models are not safer models.
+- **Security.** Veracode's 2025 GenAI Code Security Report (more than 100 LLMs across Java, JavaScript, Python and C#) finds that **around 45% of AI generated code contains at least one high severity vulnerability**, with Java failing 72% of security tasks and XSS defenses missing in 86% of relevant samples. The same report finds that **AI generated code carries 2.74 times more vulnerabilities** than human written code. Crucially, security performance has been **flat since 2022** even as model size has grown massively. Bigger models are not safer models.
 
 ### 2.3 Open source maintainers are being overrun
 60% of open source maintainers are unpaid volunteers. The "AI slop" flood has driven extreme responses: **curl** closed its bug bounty program (valid report rate around 5%), **Ghostty** banned AI generated contributions outright, and **GitHub** is reportedly evaluating a pull request "kill switch". OpenAI, Anthropic, AWS, Google, Microsoft and GitHub have together pledged $12.5M to OpenSSF and Alpha Omega to address slop bug reports.
@@ -66,7 +66,7 @@ Four clusters, each with the two or three challenges that carry the strongest ev
 
 **Around 45% high severity vulnerability rate, statistically flat since 2022.** Veracode 2025 (more than 100 LLMs across Java, JavaScript, Python and C#): Java fails 72% of security tasks. XSS defenses are missing in 86% of relevant samples. Bigger and newer models are not safer.
 
-**2.74 times more vulnerabilities in AI co authored PRs.** Snyk 2025 production telemetry. CodeRabbit's 470 PR study reports critical issues up around 40% and major issues up around 70%.
+**2.74 times more vulnerabilities in AI generated code than human written code.** Veracode 2025 GenAI Code Security Report. CodeRabbit's 470 PR study reports critical issues up around 40% and major issues up around 70%.
 
 **Supply chain amplification and slopsquatting.** AI assistants pull dependencies with minimal scrutiny, so compromised packages spread faster. Models also hallucinate package names and attackers register them. The axios npm compromise (March 2026) and the Clawdbot / OpenClaw incident illustrate the two ends of this spectrum (see `use-cases.md`).
 
