@@ -1,10 +1,6 @@
-# One-shot generation prompt — Catan (AI version)
+# Generation prompt — Catan (AI version)
 
-This file is the **exact prompt** used to generate the `catan-ai/` implementation. It is preserved verbatim so the experiment is reproducible and so Task 2 has the reflection material it needs.
-
-To reproduce: start a fresh Claude Code (Opus) session with the working directory set to `task-2-case-study/implementation/catan-ai/`, paste the prompt below as the first and only user message, and let the agent run to completion without any further interaction.
-
----
+Start a fresh Claude Code (Opus) session in `task-2-case-study/implementation/catan-ai/`. Paste the prompt below as the first message. If the result does not compile or the required tests fail, follow-up prompts are allowed until it runs.
 
 ## Prompt
 
