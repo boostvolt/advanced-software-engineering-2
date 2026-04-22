@@ -29,14 +29,14 @@ _Budget: about 3 to 4 hours per person per week. Independent tasks are split acr
   - Feedback: back up claims (e.g. "AI code has high severity vulnerabilities") with sources AND later case study
   - Teacher confirmed the human-vs-AI approach leveraging the first-semester Java Catan game
 - [ ] **matamar:** Enrich Task 1 draft with sources for unsubstantiated claims + rebuild the first-semester Java Catan game with Claude Opus (human vs AI comparison)
-- [ ] **kottjan01:** Survey tools (Dependabot, Jules, GitHub Security Agent, SonarQube, etc.), document what each solves and misses, find an OSS project to test them on
+- [ ] **kottjan01:** Survey GitHub's security stack (Dependabot, Code Security, Secret Protection, Copilot code review / Dependency Review) against a Node.js bench project. Document what each tool solves and misses, pick winner(s) for the Catan case study.
 - [ ] **galinpab:** Draft a concept for a class activity (~5 min, interactive, original)
 - [ ] **daotro01:** Make his code review activity idea concrete (show good/bad code, class reviews it, compare with AI verdict; ~5 min)
 - daotro01 limited availability (military).
 
 #### Week 3 — Apr 20–26
 - [ ] **Check-In 2 with lecturer (Wed Apr 22): present tool and repo choice**
-- [ ] **matamar + kottjan01:** Pick the best tool from the survey and run it on both Catan implementations (human-made vs Claude Opus generated)
+- [ ] **matamar + kottjan01:** Apply the tool(s) kottjan01 selected on the Node.js bench to both Catan implementations (human-made vs Claude Opus generated). The Node.js project is where the tool choice is justified; Catan is where the human-vs-AI claim is tested.
 - [ ] **daotro01:** Help run tools and document scan results in `task-2-case-study/results/`
 - [ ] Discuss both activity drafts as a team (daotro01's code review activity + galinpab's idea) and refine them (all)
 
