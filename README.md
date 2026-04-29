@@ -9,7 +9,7 @@ The Task 1.3 draft submitted on Sunday Apr 12 is at [task-1-research/draft-submi
 | Date | Deliverable | Where |
 |---|---|---|
 | **Sun 2026-04-12, 23:59** | Task 1.3 draft (summary of Tasks 1.1 and 1.2) + team registration | Moodle |
-| **Tue 2026-05-12, 23:59** | Short report (Task 3 — **mandatory**, no grade without it) | Moodle |
+| **Wed 2026-05-06, 23:59** | Short report (Task 3 — **mandatory**, no grade without it) | Moodle |
 | **Tue 2026-05-19, 23:59** | Final submission: short report, presentation, discussion slide, code repo link | Moodle |
 
 ## Weekly plan
@@ -39,30 +39,29 @@ _Budget: about 3 to 4 hours per person per week. Independent tasks are split acr
   - Teacher approved full catan task scope for both Catan impls
 - [x] **matamar:** Rebuild the first-semester Java Catan game with Claude Opus via `task-2-case-study/implementation/PROMPT.md`. Output in `catan-ai/`, `mvn test` passes 8/8, `GENERATION_LOG.md` records the reflection.
 - [x] **matamar:** Start the short report draft in `task-3-report/short-report-draft.md` — Task 1 content enriched, Case study section added with methodology and two-phase tool approach. Findings and reflection stubbed until scans arrive.
-- [ ] **kottjan01:** Evaluate GitHub's security stack (Dependabot, Code Security, Secret Protection, Copilot code review / Dependency Review) against a Node.js bench project. Two deliverables: (a) capability comparison table for the presentation, (b) one tool selected for the Catan case study. Selection criterion: among tools that actually produce findings on a Java codebase like Catan, which is strongest.
-- [ ] **daotro01 + galinpab:** Finalize both activities (daotro01's code review + galinpab's "AI explains code"), team discussion to refine. Target: presentation-ready by Check-In 3 (Wed Apr 29).
+- [x] **kottjan01:** Evaluated candidate code-analysis tools against a Node.js bench project. **Decision: SonarQube** for the Catan human-vs-AI code analysis comparison. Documentation of the comparison and the SonarQube run on Catan moves to Week 4.
+- [x] **daotro01 + galinpab:** Activity discussion. Decision: two activities won't fit in the time budget, so we run **one** 10-minute activity, prepared by **daotro01**. galinpab pivots to preparing the presentation structure.
 
 #### Week 4 — Apr 27–May 3
-- [ ] **Check-In 3 with lecturer (Wed Apr 29): present preliminary results**
-- [ ] **matamar + kottjan01:** Apply the tool(s) kottjan01 selected on the Node.js bench to both Catan implementations (human-made vs Claude Opus generated). Node.js justifies the tool choice; Catan tests the human-vs-AI claim.
-- [ ] **daotro01:** Help run tools and document scan results in `task-2-case-study/results/`
-- [ ] **matamar + galinpab:** Finish the short report draft (Tasks 1 + 2 combined, 2 to 5 pages). Draft already begun in Week 3; galinpab picks up polish and structure while matamar focuses on the Task 2 results section as scans arrive.
-- [ ] **daotro01:** Write Task 2 reflection docs (decision rationale, difficulties, tradeoffs, limitations, future work)
-- [ ] **kottjan01:** Review report draft for technical accuracy on tool findings
-- [ ] **daotro01 + galinpab:** Apply any feedback from Check-In 3 to the activities
+- [x] **Check-In 3 with lecturer (Wed Apr 29): present preliminary results**
+  - Feedback: report should be **to the point, not a full academic report**. Preferred length **5 to 10 pages** (overrides the 2 to 5 pages in `task-spec.md`).
+- [ ] **kottjan01:** Document the tool comparison results in `task-2-case-study/tool-survey/` and apply **SonarQube** to both Catan implementations (human-made vs Claude Opus generated). Document the findings in `task-2-case-study/results/`.
+- [ ] **matamar:** Finalize the short report once kottjan01's SonarQube findings are in. Tasks 1 + 2 combined, **5 to 10 pages**, to-the-point style (not a full academic report).
+- [ ] **galinpab:** Prepare the presentation structure — a skeleton ready to be filled with the report content and case-study results next week.
+- [ ] **daotro01:** Prepare the 10-minute class activity.
 
 #### Week 5 — May 4–10
-- [ ] **matamar + galinpab:** Finish writing the short report (Tasks 1 + 2 combined, 2 to 5 pages)
-- [ ] Wed May 6 class session: read other teams' reports, get assigned discussion report (all) — confirm whether this class session still happens May 6 given the new May 12 report deadline
-- [ ] **kottjan01:** Build presentation slides and prepare live demo of the tool
-- [ ] **daotro01:** Read assigned team's report, draft discussion slide (Task 6)
-- [ ] **daotro01 + galinpab:** Finalize both activities for presentation day
+- [ ] **Wed May 6, first 2 lessons:** Show the report to the teacher and apply any last feedback. *(Last 2 lessons are the ABB guest lecture — onsite presence expected.)*
+- [ ] **Wed May 6, 23:59:** Submit the short report on Moodle.
+- [ ] Wed May 6 class session: read other teams' reports, get assigned discussion report (all).
+- [ ] **galinpab + kottjan01:** Fill the presentation structure with the actual report and case-study results; prepare the live demo of SonarQube.
+- [ ] **daotro01:** Read assigned team's report, draft discussion slide (Task 6).
+- [ ] **daotro01:** Finalize the activity for presentation day.
 
 #### Week 6 — May 11–17
-- [ ] **matamar:** Polish short report, export to PDF, **submit on Moodle (Tue May 12)**
 - [ ] Rehearsal (all)
-- [ ] **kottjan01:** Finish slides
-- [ ] **daotro01 + galinpab:** Finish activity materials
+- [ ] **galinpab + kottjan01:** Finish slides
+- [ ] **daotro01:** Finish activity materials
 - [ ] **daotro01:** Finish discussion slide
 - [ ] **Presentation day: Wed May 13**
 
