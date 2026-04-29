@@ -17,12 +17,13 @@ Both implementations target the same scope (Teilaufgabe 1 + 2 + 3 with the Robbe
 | Folder | Contents | Owner | Week |
 |---|---|---|---|
 | `spec/` | Original assignment PDFs (Anleitung + Kick-Off). Authoritative spec. | — | — |
-| `tool-survey/` | Evaluation of GitHub's security stack (Dependabot, Code Security, Secret Protection, Copilot code review / Dependency Review) on a Node.js bench project. Selects tool(s) to apply to Catan. | kottjan01 | 2 |
+| `tool-survey/` | Evaluation of candidate code-analysis tools. Selected: **SonarQube**. | kottjan01 | 3-4 |
 | `implementation/` | `SPEC.md`, `PROMPT.md`, `catan-human/`, `catan-ai/`. | matamar | 2 |
-| `results/` | Raw scan outputs per implementation. | matamar + kottjan01 | 3 |
-| `reflection/` | Decision rationale, difficulties, tradeoffs, limitations, future work. | daotro01 | 4 |
-| `demo/` | Live demo script and materials for presentation day. | daotro01 + galinpab | 5-6 |
+| `results/` | Raw SonarQube scan outputs per implementation, plus `structural-comparison.md`. | kottjan01 | 4 |
+| `demo/` | Live demo script and materials for presentation day. | kottjan01 + galinpab | 6 |
+
+Reflection (decision rationale, difficulties, tradeoffs, limitations, future work) lives directly in `task-3-report/short-report-draft.md` rather than in separate files — the report is the synthesis and there is no intermediate stage.
 
 ## Relationship to Task 3 short report
 
-The short report (`task-3-report/short-report-draft.md`) has a stub Section 4 that will be filled in once this case study produces scan results. The reflection documents here are the raw material for that section; the short report is the synthesis.
+The short report (`task-3-report/short-report-draft.md`) has a stub Section 4 that will be filled in once this case study produces SonarQube scan results.
