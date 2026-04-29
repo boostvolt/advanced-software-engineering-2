@@ -1,6 +1,6 @@
 # Literature Review
 
-Annotated source list for the Task 1 draft and the upcoming Task 3 short report. Each entry gives what the source is, the specific claim we use it for, and any methodology caveat. Sources we evaluated but rejected are listed at the end with one-line reasons. Full BibTeX in `references/bibliography.bib`. Verdict reasoning for every candidate source lives in `source-evaluation.md`.
+Annotated source list for the Task 1 draft and the upcoming Task 3 short report. Each entry gives what the source is, the specific claim we use it for, the methodology caveat, and the reasoning behind the verdict. Sources we evaluated but rejected are listed at the end with one-line reasons. Full BibTeX in `references/bibliography.bib`.
 
 We prioritise **2025 and 2026 sources** because the phenomena we study (the code quality and security effects of AI coding assistants, and the review bottleneck they create) have evolved substantially since 2024. Earlier sources are kept only as essential anchors.
 
@@ -38,19 +38,19 @@ Evaluation of 100+ LLMs across Java, JavaScript, Python, C#.
 ## D. Academic / human factors
 
 **Kabir, Udo-Imeh, Kou, Zhang (2024) — *Is Stack Overflow Obsolete? An Empirical Study of the Characteristics of ChatGPT Answers to Stack Overflow Questions*** (CHI 2024)
-Peer-reviewed academic paper. The only peer-reviewed source we currently lean on.
-- 52% of ChatGPT answers to programming questions contain incorrect information.
+Peer-reviewed academic paper. The only peer-reviewed source we currently lean on. Evaluated 517 programming questions.
+- 52% of ChatGPT answers contain incorrect information.
 - 77% of answers are verbose.
 - Despite this, users still preferred ChatGPT answers 35% of the time and overlooked the misinformation 39% of the time.
-- Why we cite it: explains the *human* mechanism behind why insecure AI code reaches production. People accept plausible wrong answers.
+- Why we cite it: explains the *human* mechanism behind why insecure AI code reaches production. Pairs with DORA's "AI amplifies" framing — humans accept AI output too easily, so weak teams degrade faster.
 - URL: https://arxiv.org/pdf/2308.02312
 
 ## E. Adoption baseline and proposed solution (Dependabot)
 
 **GitHub Octoverse 2025 — *A New Developer Joins GitHub Every Second as AI Leads TypeScript to #1***
 We use this source for two separate claims:
-- **Adoption baseline.** 180M+ developers on GitHub; 36M joined in 2025 alone. Nearly 80% of new developers use GitHub Copilot in their first week. Sharper "AI is the default for new developers" framing than DORA's 90% number.
-- **Proposed solution for quality and security drift (Dependabot).** Across 2.66 million repositories with Dependabot enabled, automated dependency vulnerability fix times collapsed from 200–300 days down to 30–50 days. Used in the draft as the proposed-solution case under Challenge 1.
+- **Adoption baseline.** 180M+ developers on GitHub; 36M joined in 2025 alone. Nearly 80% of new developers use GitHub Copilot in their first week. Sharper "AI is the default for new developers" framing than DORA's 90% number — it shows AI is the *first* thing junior developers learn, not something they migrate to.
+- **Proposed solution for quality and security drift (Dependabot).** Across 2.66 million repositories with Dependabot enabled, automated dependency vulnerability fix times collapsed from 200–300 days down to 30–50 days. Used in the draft as the proposed-solution case under Challenge 1, and as an honest qualifier to our mostly negative security framing.
 - URL: https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/
 
 ## F. Open source ecosystem
@@ -82,23 +82,47 @@ Secondary corroborating sources (Kaspersky, CyberNews, Axios news outlet, Bitdef
 
 ---
 
+## Borderline calls — candidates for Task 3, not in the current draft
+
+These were evaluated and judged useful enough to revisit when expanding the draft into the short report.
+
+**Gartner (2025) — *Top Strategic Trends in Software Engineering for 2025 and Beyond***
+Introduces **"AI-Native Software Engineering"** and projects 90% of enterprise engineers will use AI assistants by 2028 (up from <14% in early 2024). Pair with DORA: Gartner predicted rapid adoption, DORA confirmed it has already happened. Useful jargon ("AI-Native SWE") for the short report.
+URL: https://www.gartner.com/en/newsroom/press-releases/2025-07-01-gartner-identifies-the-top-strategic-trends-in-software-engineering-for-2025-and-beyond
+
+**Peng et al. (2023) — *The Impact of AI on Developer Productivity: Evidence from GitHub Copilot*** (arxiv 2302.06590)
+The headline 55.8% speedup study. Cite *exactly once* as a foil: "the most cited number on AI assisted coding measures task completion time only, not whether the resulting code is maintainable or secure." Funded by GitHub — call out the vendor tie when citing.
+URL: https://arxiv.org/pdf/2302.06590
+
+**Deloitte (2026) — *Global Software Industry Outlook***
+Adds the *offensive* security dimension our thread is missing: in late 2025 attackers used jailbroken AI tools to run attacks where 80–90% of the agentic chain was conducted with no human involvement. One sentence in the security section would round out the picture.
+URL: https://www.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/software-industry-outlook.html
+
+**Bloomberg (May 2023) — *Samsung Bans ChatGPT and Other Generative AI Use by Staff After Leak***
+Historical anchor. Samsung engineers pasted proprietary semiconductor source three times in three weeks; Samsung banned generative AI on company devices. Predates our 2025–2026 focus window but strengthens the argument that the security concerns are not new — they are an old known problem the industry has not solved. PCMag covers the same incident as a corroborating outlet.
+URLs: https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak · https://www.pcmag.com/news/samsung-bans-chatgpt-after-engineers-use-it-to-fix-proprietary-code
+
+---
+
 ## Sources we evaluated and rejected
 
-These sources came up during research but are not load-bearing. Reasoning for each is in `source-evaluation.md`.
+These came up during research but are not load-bearing.
 
-- **Faros AI (2025)** — vendor blog summarising DORA. Redundant once we are citing DORA directly.
-- **CodeRabbit (2025) 470 PR study** — vendor PR study, less authority than Veracode for the same point.
-- **LogRocket (2025)** — practitioner blog, no primary data.
-- **Help Net Security / CodeRabbit (Dec 2025)** — same.
-- **All Things Open (2025)** — covers the same incidents as The New Stack and LeadDev.
-- **ITPro (2026) on the $12.5M OpenSSF pledge** — we don't cite the pledge in the body any more.
-- **CMU study (Dec 2025) via Bowley blog** — we never read the original paper.
-- **LeadDev (2025) "How AI Generated Code Accelerates Technical Debt"** — redundant with GitClear.
-- **Pragmatic Engineer (March 2026) "AI Tooling for Software Engineers in 2026"** — adoption data only. Redundant with DORA and Octoverse 2025.
-- **Eventually Making (Feb 2026)** — practitioner blog, no primary data.
-- **Baytech Consulting (2025)** — vendor pitch.
-- **Gartner "AI Agents Transforming Software Engineering"** — too generic.
-- **PCMag Samsung coverage (2023)** — secondary outlet for the same incident Bloomberg covered.
+| Source | Reason rejected |
+|---|---|
+| Faros AI (2025) | Vendor blog summarising DORA — redundant once we cite DORA directly |
+| CodeRabbit (2025) 470 PR study | Vendor PR study, less authority than Veracode for the same point |
+| LogRocket (2025) | Practitioner blog, no primary data |
+| Help Net Security / CodeRabbit (Dec 2025) | Same |
+| All Things Open (2025) | Covers the same incidents as The New Stack and LeadDev |
+| ITPro (2026) on the $12.5M OpenSSF pledge | We don't cite the pledge in the body any more |
+| CMU study (Dec 2025) via Bowley blog | We never read the original paper |
+| LeadDev (2025) "How AI Generated Code Accelerates Technical Debt" | Redundant with GitClear |
+| Pragmatic Engineer (March 2026) "AI Tooling for Software Engineers in 2026" | Adoption data only — redundant with DORA and Octoverse 2025 |
+| Eventually Making (Feb 2026) | Practitioner blog, no primary data |
+| Baytech Consulting (2025) | Vendor pitch; the 91% figure traces back to Faros AI we already cite |
+| Gartner "AI Agents Transforming Software Engineering" | Too generic — DORA already covers the consensus framing |
+| PCMag Samsung coverage (2023) | Secondary outlet for the same incident Bloomberg covered (kept as corroborator above) |
 
 ## Sources we still want to read before the short report
 
