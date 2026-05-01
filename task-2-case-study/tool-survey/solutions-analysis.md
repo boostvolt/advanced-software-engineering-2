@@ -1,33 +1,49 @@
-# Tool survey: GitHub security stack
+# Tool survey: candidate analysis solutions
 
-We evaluate five GitHub security tools against a small Node.js bench project, then select one to apply to both Catan implementations. Selection criterion: among tools that actually produce findings on a Java codebase like Catan, which is strongest.
+We evaluated GitHub's security stack against a small Node.js bench project, then selected one tool to apply to both Catan implementations. The real decision was not "which tool is best overall?" but "which tool is the right shape for comparing two already-existing Java Maven codebases?"
 
-## Capabilities
+That distinction matters. Most GitHub-native security features are strongest inside a development workflow:
 
-| Tool | What it finds | Input scope | Output format | Java support | Cost |
-|---|---|---|---|---|---|
-| Dependabot | Known vulnerabilities in declared dependencies | `pom.xml` / `package.json` / other manifests | GitHub security alerts plus auto update PRs | *[verify on bench]* | Free on public repos |
-| Code Security (CodeQL) | Static analysis findings from query packs | Repository source code | SARIF plus code scanning alerts | *[verify on bench]* | Free on public repos |
-| Secret Protection (Secret Scanning) | Exposed tokens, API keys, credentials | Commit history and diffs | Secret alerts | Language agnostic | Free on public repos |
-| Copilot code review | AI generated review comments and suggestions | Pull request diff | Inline PR comments | Language agnostic | Requires Copilot subscription |
-| Dependency Review | New or modified vulnerable dependencies in a PR | PR diff of manifests and lockfiles | PR status check | *[verify on bench]* | Free |
+- pull requests and diffs
+- dependency manifest changes
+- secret leaks in commits or history
 
-## Node.js bench
+Our Catan case study is not that. We are comparing two static snapshots of the same assignment, one human-written and one Claude Opus generated. That setup strongly favors a static analyzer over workflow-driven tooling.
 
-A small Node.js project with intentional issues so each tool has something to detect:
+## Capability fit for the case study
 
-- One outdated dependency with a known CVE (for Dependabot and Dependency Review)
-- One hardcoded API key in a config file (for Secret Protection)
-- One SQL injection or XSS pattern (for Code Security)
-- One open pull request for Copilot code review to comment on
+| Tool | What it finds | Best input surface | Why it is weak or strong for Catan | Verdict |
+|---|---|---|---|---|
+| Dependabot | Known vulnerabilities in declared dependencies | `pom.xml`, `package.json`, lockfiles | Good at dependency hygiene, but our Catan projects have tiny dependency surfaces and the study is about code quality/security in the code itself, not update automation. | Discarded |
+| GitHub Advanced Security / CodeQL | Static analysis findings from query packs | Repository source code | Strongest GitHub-native alternative because it can analyze Java source directly. Still, SonarQube is a better fit here because it exposes maintainability and reliability signals alongside security, which matters more than pure vulnerability scanning in a small student-project comparison. | Runner-up |
+| Secret Protection | Exposed tokens, API keys, credentials | Commit history, diffs, repository contents | Wrong surface. The Catan projects are offline Java games with no real credentials or tokens. A zero-result here would say more about the input than the code quality. | Discarded |
+| Copilot code review | AI review comments and suggestions | Pull request diff | Wrong workflow. We are not reviewing an active PR but two finished codebases. This would test Copilot's review UX, not the artefacts themselves. | Discarded |
+| Dependency Review | Vulnerable dependencies newly introduced by a PR | Pull request diff of manifest and lockfile changes | Same problem as Copilot review: it is a PR guardrail, not a static comparison tool for already-existing repositories. | Discarded |
+| SonarQube | Static code analysis across bugs, code smells, hotspots, duplication, complexity | Full Java Maven project | Best fit for two static Java snapshots. It runs directly on the built project and produces comparable bug/reliability/maintainability output without needing a PR, a secret leak, or a dependency change. | Selected |
 
-For each tool, record: finding count, time to first finding, false positives, output format.
+## Why the Node.js bench still mattered
 
-Bench location: *[to be added]*.
+The bench project existed to give each GitHub tool a fair shot on an input where it could actually trigger. Without that, Secret Protection or Dependency Review would look useless simply because Catan is the wrong target.
 
-## Selection criterion
+Bench design:
 
-Among tools that actually produce findings on a Java codebase like Catan, which is strongest. Catan is an offline Java Maven game with no network calls, minimal external dependencies, and no user supplied secrets, so tools that need a specific input surface may produce zero findings on it. The Node.js bench is what lets us evaluate the tools fairly before applying one to Catan.
+- one outdated dependency with a known CVE for Dependabot and Dependency Review
+- one hardcoded API key for Secret Protection
+- one obvious code-level bug or security pattern for CodeQL
+- one open pull request for Copilot code review
+
+The bench answers "can this tool do anything useful at all?" The Catan run answers the narrower course question: which tool still produces useful comparison signal on two static Java implementations of the same assignment?
+
+## Selection criterion for Catan
+
+Among tools that can still say something non-trivial about a small offline Java Maven codebase, which one is strongest? Catan has:
+
+- no meaningful network-facing attack surface
+- almost no third-party dependencies
+- no secrets
+- no active PR diff
+
+That immediately weakens Dependabot, Secret Protection, Copilot review, and Dependency Review. CodeQL remains viable, but SonarQube gives the broader signal this case study actually needs: whether the AI implementation carries more static quality debt than the human one.
 
 ## Outcome
 

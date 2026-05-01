@@ -19,7 +19,7 @@ Both implementations target the same scope (Teilaufgabe 1 + 2 + 3 with the Robbe
 | `spec/` | Original assignment PDFs (Anleitung + Kick-Off). Authoritative spec. | — | — |
 | `tool-survey/` | Evaluation of candidate code-analysis tools. Selected: **SonarQube**. | kottjan01 | 3-4 |
 | `implementation/` | `SPEC.md`, `PROMPT.md`, `catan-human/`, `catan-ai/`. | matamar | 2 |
-| `results/` | Raw SonarQube scan outputs per implementation, plus `structural-comparison.md`. | kottjan01 | 4 |
+| `results/` | SonarQube scan summary and interpretation, plus `structural-comparison.md`. | kottjan01 | 4 |
 | `demo/` | Live demo script and materials for presentation day. | kottjan01 + galinpab | 6 |
 
 Reflection (decision rationale, difficulties, tradeoffs, limitations, future work) lives directly in `task-3-report/short-report-draft.md` rather than in separate files — the report is the synthesis and there is no intermediate stage.
