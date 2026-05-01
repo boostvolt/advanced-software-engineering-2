@@ -45,7 +45,7 @@ _Budget: about 3 to 4 hours per person per week. Independent tasks are split acr
 #### Week 4 — Apr 27–May 3
 - [x] **Check-In 3 with lecturer (Wed Apr 29): present preliminary results**
   - Feedback: report should be **to the point, not a full academic report**. Preferred length **5 to 10 pages** (overrides the 2 to 5 pages in `task-spec.md`).
-- [ ] **kottjan01:** Document the tool comparison results in `task-2-case-study/tool-survey/` and apply **SonarQube** to both Catan implementations (human-made vs Claude Opus generated). Document the findings in `task-2-case-study/results/`.
+- [x] **kottjan01:** Documented the tool comparison results in `task-2-case-study/tool-survey/` and the **SonarQube** findings for both Catan implementations in `task-2-case-study/results/`.
 - [ ] **matamar:** Finalize the short report once kottjan01's SonarQube findings are in. Tasks 1 + 2 combined, **5 to 10 pages**, to-the-point style (not a full academic report).
 - [ ] **galinpab:** Prepare the presentation structure — a skeleton ready to be filled with the report content and case-study results next week.
 - [ ] **daotro01:** Prepare the 10-minute class activity.
