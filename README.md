@@ -46,9 +46,9 @@ _Budget: about 3 to 4 hours per person per week. Independent tasks are split acr
 - [x] **Check-In 3 with lecturer (Wed Apr 29): present preliminary results**
   - Feedback: report should be **to the point, not a full academic report**. Target length is the **2 to 5 pages** in `task-spec.md`; up to **10 pages max** is acceptable if needed.
 - [x] **kottjan01:** Documented the tool comparison results in `task-2-case-study/tool-survey/` and the **SonarQube** findings for both Catan implementations in `task-2-case-study/results/`.
-- [ ] **matamar:** Finalize the short report **content** once kottjan01's SonarQube findings are in. Tasks 1 + 2 combined, **2 to 5 pages** (up to 10 max), to-the-point style (not a full academic report). Final LaTeX compile, title page, and formatting polish are galinpab's job — see Week 5.
+- [x] **matamar:** Finalize the short report **content** once kottjan01's SonarQube findings are in. Tasks 1 + 2 combined, **2 to 5 pages** (up to 10 max), to-the-point style (not a full academic report). Final LaTeX compile, title page, and formatting polish done before the 23:59 deadline by galinpab.
 - [ ] **galinpab:** Prepare the presentation structure — a skeleton ready to be filled with the report content and case-study results next week.
-- [ ] **daotro01:** Prepare the 10-minute class activity.
+- [x] **daotro01:** Prepare the 10-minute class activity.
 
 #### Week 5 — May 4–10
 - [ ] **Wed May 6, first 2 lessons:** Show the report to the teacher and apply any last feedback. *(Last 2 lessons are the ABB guest lecture — onsite presence expected.)*
