@@ -47,28 +47,23 @@ _Budget: about 3 to 4 hours per person per week. Independent tasks are split acr
   - Feedback: report should be **to the point, not a full academic report**. Target length is the **2 to 5 pages** in `task-spec.md`; up to **10 pages max** is acceptable if needed.
 - [x] **kottjan01:** Documented the tool comparison results in `task-2-case-study/tool-survey/` and the **SonarQube** findings for both Catan implementations in `task-2-case-study/results/`.
 - [x] **matamar:** Finalize the short report **content** once kottjan01's SonarQube findings are in. Tasks 1 + 2 combined, **2 to 5 pages** (up to 10 max), to-the-point style (not a full academic report). Final LaTeX compile, title page, and formatting polish done before the 23:59 deadline by galinpab.
-- [ ] **galinpab:** Prepare the presentation structure — a skeleton ready to be filled with the report content and case-study results next week.
+- [x] **galinpab:** Prepare the presentation structure — a skeleton ready to be filled with the report content and case-study results next week.
 - [x] **daotro01:** Prepare the 10-minute class activity.
 
 #### Week 5 — May 4–10
-- [ ] **Wed May 6, first 2 lessons:** Show the report to the teacher and apply any last feedback. *(Last 2 lessons are the ABB guest lecture — onsite presence expected.)*
-- [ ] **galinpab:** Take matamar's finalized content and produce the submission-ready PDF — LaTeX compile, title page, final formatting polish. Done before the 23:59 deadline.
+- [x] **Wed May 6, first 2 lessons:** Show the report to the teacher and apply any last feedback. *(Last 2 lessons are the ABB guest lecture — onsite presence expected.)*
+- [x] **galinpab:** Take matamar's finalized content and produce the submission-ready PDF — LaTeX compile, title page, final formatting polish. Done before the 23:59 deadline.
 - [ ] **Wed May 6, 23:59:** Submit the short report on Moodle.
-- [ ] Wed May 6 class session: read other teams' reports, get assigned discussion report (all).
-- [ ] **galinpab + kottjan01:** Fill the presentation structure with the actual report and case-study results; prepare the live demo of SonarQube.
-- [ ] **daotro01:** Read assigned team's report, draft discussion slide (Task 6).
-- [ ] **daotro01:** Finalize the activity for presentation day.
+- [x] **galinpab:** Fill the presentation structure with the actual report and case-study results; prepare the live demo of SonarQube.
+- [x] **daotro01:** Finalize the activity for presentation day.
 
 #### Week 6 — May 11–17
 - [ ] Rehearsal (all)
 - [ ] **galinpab + kottjan01:** Finish slides
 - [ ] **daotro01:** Finish activity materials
 - [ ] **daotro01:** Finish discussion slide
+- [ ] **Submit ASE project slides, discussant slide, and link to code repository** (Tue May 12th, 23:59)
 - [ ] **Presentation day: Wed May 13**
-
-#### Week 7 — May 18–19
-- [ ] Final pass on all deliverables (all)
-- [ ] **Submit all deliverables on Moodle (Tue May 19)**
 
 ## Generate PDF
 
