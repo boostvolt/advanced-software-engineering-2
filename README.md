@@ -52,7 +52,7 @@ _Budget: about 3 to 4 hours per person per week. Independent tasks are split acr
 
 #### Week 5 — May 4–10
 - [x] **Wed May 6, first 2 lessons:** Show the report to the teacher and apply any last feedback. *(Last 2 lessons are the ABB guest lecture — onsite presence expected.)*
-- [x] **galinpab:** Take matamar's finalized content and produce the submission-ready PDF — LaTeX compile, title page, final formatting polish. Done before the 23:59 deadline.
+- [ ] **galinpab:** Take matamar's finalized content and produce the submission-ready PDF — LaTeX compile, title page, final formatting polish. Done before the 23:59 deadline.
 - [ ] **Wed May 6, 23:59:** Submit the short report on Moodle.
 - [x] **galinpab:** Fill the presentation structure with the actual report and case-study results; prepare the live demo of SonarQube.
 - [x] **daotro01:** Finalize the activity for presentation day.
