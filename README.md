@@ -59,10 +59,11 @@ _Budget: about 3 to 4 hours per person per week. Independent tasks are split acr
 
 #### Week 6 — May 11–17
 - [ ] **All:** Finish slides
-- [ ] **daotro01:** Finish activity materials
-- [ ] **TBD:** Finish discussion slide
-- [ ] **Submit ASE project slides, discussant slide, and link to code repository** (Tue May 12th, 23:59)
-- [ ] **Presentation day: Wed May 13 or Wed May 20**
+- [ ] **TBD:** discussion slide for **Team 5** (they present Wed May 13, 08:35)
+- [ ] **Submit ASE project slides, discussant slide for Team 5, and link to code repository** (Tue May 12, 23:59)
+
+#### Week 7 — May 18–20
+- [ ] **Presentation day: Wed May 20, 08:35** (Team 5 does our discussion slide)
 
 ## Generate PDF
 
