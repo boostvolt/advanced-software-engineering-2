@@ -66,7 +66,7 @@ _Budget: about 3 to 4 hours per person per week. Independent tasks are split acr
 - [ ] **Submit ASE project slides, discussant slide for Team 5, and link to code repository** (Tue May 19, 23:59)
 - [ ] **Presentation day: Wed May 20, 08:35** (Team 5 does our discussion slide)
 
-## Generate PDF
+## Generate PDF for drafting preview
 
 ```bash
 pandoc <input>.md -o <output>.pdf --pdf-engine=xelatex -V geometry:margin=1in -V fontsize=11pt -V header-includes:'\usepackage{fancyhdr}\pagestyle{fancy}\fancyhead{}\fancyhead[C]{daotro01, matamar, galinpab, kottjan1}\fancyfoot{}\fancyfoot[C]{\thepage}'
