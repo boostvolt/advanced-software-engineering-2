@@ -58,7 +58,7 @@ _Budget: about 3 to 4 hours per person per week. Independent tasks are split acr
 - [x] **daotro01:** Finalize the activity for presentation day.
 
 #### Week 6 — May 11–17
-- [ ] **All:** Finish slides
+- [x] **All:** Finish slides
 - [x] **daotro01 + matamar:** discussion slide for **Team 5** (they present Wed May 13, 08:35) — content drafted in `task-6-discussion/discussion-slide.md`
 - [x] **matamar:** send slide to team 5 before May 12, 23:59
 
